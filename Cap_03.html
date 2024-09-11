@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Modelos Matemáticos nas Partilhas &#8212; Modelos Matemáticos para a Cidadania</title>
+    <title>Modelos Matemáticos nas Partilhas &#8212; Modelos Matemáticos para a Cidadania</title>
   
   
   
@@ -34,6 +34,8 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,6 +49,7 @@
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/thebelab-helper.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -54,6 +57,8 @@
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -63,8 +68,6 @@
     <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Modelos Matemáticos em Finanças Pessoais" href="Cap_04.html" />
-    <link rel="prev" title="2. Modelos Matemáticos nas Eleições" href="Cap_02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -127,6 +130,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -174,11 +179,9 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Cap_01.html">1. Introdução aos Modelos Matemáticos na Cidadania</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cap_02.html">2. Modelos Matemáticos nas Eleições</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Modelos Matemáticos nas Partilhas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_04.html">4. Modelos Matemáticos em Finanças Pessoais</a></li>
 </ul>
 
     </div>
@@ -220,37 +223,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -422,19 +394,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principios-de-partilha-justa">3.1. Princípios de Partilha Justa</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-partilha">3.2. Métodos de Partilha</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-divisao-proporcional">3.2.1. Método da Divisão Proporcional</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-eliminacao-do-candidato-mais-fraco">3.2.2. Método da Eliminação do Candidato Mais Fraco</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-distribuicao-dos-restos">3.2.3. Método da Distribuição dos Restos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principios-de-partilha-justa">Princípios de Partilha Justa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-partilha">Métodos de Partilha</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-divisao-proporcional">Método da Divisão Proporcional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-eliminacao-do-candidato-mais-fraco">Método da Eliminação do Candidato Mais Fraco</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-distribuicao-dos-restos">Método da Distribuição dos Restos</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacoes-praticas-de-partilhas">3.3. Aplicações Práticas de Partilhas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-de-recursos-em-organizacoes">3.3.1. Distribuição de Recursos em Organizações</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divisao-de-herancas">3.3.2. Divisão de Heranças</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacoes-praticas-de-partilhas">Aplicações Práticas de Partilhas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-de-recursos-em-organizacoes">Distribuição de Recursos em Organizações</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divisao-de-herancas">Divisão de Heranças</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fairness-e-equidade-em-partilhas">3.4. Fairness e Equidade em Partilhas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fairness-e-equidade-em-partilhas">Fairness e Equidade em Partilhas</a></li>
 </ul>
             </nav>
         </div>
@@ -447,9 +419,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modelos-matematicos-nas-partilhas">
-<h1><span class="section-number">3. </span>Modelos Matemáticos nas Partilhas<a class="headerlink" href="#modelos-matematicos-nas-partilhas" title="Link to this heading">#</a></h1>
+<h1>Modelos Matemáticos nas Partilhas<a class="headerlink" href="#modelos-matematicos-nas-partilhas" title="Link to this heading">#</a></h1>
 <section id="principios-de-partilha-justa">
-<h2><span class="section-number">3.1. </span>Princípios de Partilha Justa<a class="headerlink" href="#principios-de-partilha-justa" title="Link to this heading">#</a></h2>
+<h2>Princípios de Partilha Justa<a class="headerlink" href="#principios-de-partilha-justa" title="Link to this heading">#</a></h2>
 <p>A partilha justa é um conceito fundamental em muitas situações da vida real, desde a divisão de recursos até a alocação de tarefas. Vamos explorar alguns princípios básicos.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">verificar_proporcionalidade</span><span class="p">(</span><span class="n">recursos</span><span class="p">,</span> <span class="n">alocacao</span><span class="p">,</span> <span class="n">populacao</span><span class="p">):</span>
     <span class="n">total_recursos</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">recursos</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
@@ -475,9 +447,9 @@ document.write(`
 </div>
 </section>
 <section id="metodos-de-partilha">
-<h2><span class="section-number">3.2. </span>Métodos de Partilha<a class="headerlink" href="#metodos-de-partilha" title="Link to this heading">#</a></h2>
+<h2>Métodos de Partilha<a class="headerlink" href="#metodos-de-partilha" title="Link to this heading">#</a></h2>
 <section id="metodo-da-divisao-proporcional">
-<h3><span class="section-number">3.2.1. </span>Método da Divisão Proporcional<a class="headerlink" href="#metodo-da-divisao-proporcional" title="Link to this heading">#</a></h3>
+<h3>Método da Divisão Proporcional<a class="headerlink" href="#metodo-da-divisao-proporcional" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">divisao_proporcional</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="n">proporcoes</span><span class="p">):</span>
     <span class="n">fator</span> <span class="o">=</span> <span class="n">total</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">proporcoes</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
     <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="o">*</span> <span class="n">fator</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">proporcoes</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
@@ -495,7 +467,7 @@ document.write(`
 </div>
 </section>
 <section id="metodo-da-eliminacao-do-candidato-mais-fraco">
-<h3><span class="section-number">3.2.2. </span>Método da Eliminação do Candidato Mais Fraco<a class="headerlink" href="#metodo-da-eliminacao-do-candidato-mais-fraco" title="Link to this heading">#</a></h3>
+<h3>Método da Eliminação do Candidato Mais Fraco<a class="headerlink" href="#metodo-da-eliminacao-do-candidato-mais-fraco" title="Link to this heading">#</a></h3>
 <p>Este método é usado em situações onde é necessário eliminar opções gradualmente.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eliminacao_mais_fraco</span><span class="p">(</span><span class="n">votos</span><span class="p">):</span>
     <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">votos</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
@@ -520,7 +492,7 @@ document.write(`
 </div>
 </section>
 <section id="metodo-da-distribuicao-dos-restos">
-<h3><span class="section-number">3.2.3. </span>Método da Distribuição dos Restos<a class="headerlink" href="#metodo-da-distribuicao-dos-restos" title="Link to this heading">#</a></h3>
+<h3>Método da Distribuição dos Restos<a class="headerlink" href="#metodo-da-distribuicao-dos-restos" title="Link to this heading">#</a></h3>
 <p>Este método é frequentemente usado em sistemas eleitorais proporcionais.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">distribuicao_restos</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">assentos</span><span class="p">):</span>
     <span class="n">total_votos</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">votos</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
@@ -549,9 +521,9 @@ document.write(`
 </section>
 </section>
 <section id="aplicacoes-praticas-de-partilhas">
-<h2><span class="section-number">3.3. </span>Aplicações Práticas de Partilhas<a class="headerlink" href="#aplicacoes-praticas-de-partilhas" title="Link to this heading">#</a></h2>
+<h2>Aplicações Práticas de Partilhas<a class="headerlink" href="#aplicacoes-praticas-de-partilhas" title="Link to this heading">#</a></h2>
 <section id="distribuicao-de-recursos-em-organizacoes">
-<h3><span class="section-number">3.3.1. </span>Distribuição de Recursos em Organizações<a class="headerlink" href="#distribuicao-de-recursos-em-organizacoes" title="Link to this heading">#</a></h3>
+<h3>Distribuição de Recursos em Organizações<a class="headerlink" href="#distribuicao-de-recursos-em-organizacoes" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">distribuir_recursos</span><span class="p">(</span><span class="n">orcamento_total</span><span class="p">,</span> <span class="n">departamentos</span><span class="p">,</span> <span class="n">criterios</span><span class="p">):</span>
     <span class="n">pontuacao_total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">criterio</span><span class="p">[</span><span class="n">dept</span><span class="p">]</span> <span class="k">for</span> <span class="n">criterio</span> <span class="ow">in</span> <span class="n">criterios</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="k">for</span> <span class="n">dept</span> <span class="ow">in</span> <span class="n">departamentos</span><span class="p">)</span>
     <span class="n">alocacao</span> <span class="o">=</span> <span class="p">{</span><span class="n">dept</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">dept</span> <span class="ow">in</span> <span class="n">departamentos</span><span class="p">}</span>
@@ -580,7 +552,7 @@ document.write(`
 </div>
 </section>
 <section id="divisao-de-herancas">
-<h3><span class="section-number">3.3.2. </span>Divisão de Heranças<a class="headerlink" href="#divisao-de-herancas" title="Link to this heading">#</a></h3>
+<h3>Divisão de Heranças<a class="headerlink" href="#divisao-de-herancas" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dividir_heranca</span><span class="p">(</span><span class="n">valor_total</span><span class="p">,</span> <span class="n">herdeiros</span><span class="p">,</span> <span class="n">pesos</span><span class="p">):</span>
     <span class="n">total_pesos</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">pesos</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
     <span class="n">divisao</span> <span class="o">=</span> <span class="p">{</span><span class="n">herdeiro</span><span class="p">:</span> <span class="p">(</span><span class="n">peso</span> <span class="o">/</span> <span class="n">total_pesos</span><span class="p">)</span> <span class="o">*</span> <span class="n">valor_total</span> <span class="k">for</span> <span class="n">herdeiro</span><span class="p">,</span> <span class="n">peso</span> <span class="ow">in</span> <span class="n">pesos</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
@@ -601,7 +573,7 @@ document.write(`
 </section>
 </section>
 <section id="fairness-e-equidade-em-partilhas">
-<h2><span class="section-number">3.4. </span>Fairness e Equidade em Partilhas<a class="headerlink" href="#fairness-e-equidade-em-partilhas" title="Link to this heading">#</a></h2>
+<h2>Fairness e Equidade em Partilhas<a class="headerlink" href="#fairness-e-equidade-em-partilhas" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">avaliar_equidade</span><span class="p">(</span><span class="n">alocacao</span><span class="p">,</span> <span class="n">necessidades</span><span class="p">):</span>
     <span class="n">satisfacao</span> <span class="o">=</span> <span class="p">{</span><span class="n">entidade</span><span class="p">:</span> <span class="n">alocacao</span><span class="p">[</span><span class="n">entidade</span><span class="p">]</span> <span class="o">/</span> <span class="n">necessidades</span><span class="p">[</span><span class="n">entidade</span><span class="p">]</span> <span class="k">for</span> <span class="n">entidade</span> <span class="ow">in</span> <span class="n">alocacao</span><span class="p">}</span>
     
@@ -628,8 +600,8 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "pjocoelho/JupyterBook_10",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -654,24 +626,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Cap_02.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Modelos Matemáticos nas Eleições</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="Cap_04.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Modelos Matemáticos em Finanças Pessoais</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -688,19 +642,19 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principios-de-partilha-justa">3.1. Princípios de Partilha Justa</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-partilha">3.2. Métodos de Partilha</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-divisao-proporcional">3.2.1. Método da Divisão Proporcional</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-eliminacao-do-candidato-mais-fraco">3.2.2. Método da Eliminação do Candidato Mais Fraco</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-distribuicao-dos-restos">3.2.3. Método da Distribuição dos Restos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principios-de-partilha-justa">Princípios de Partilha Justa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-partilha">Métodos de Partilha</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-divisao-proporcional">Método da Divisão Proporcional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-eliminacao-do-candidato-mais-fraco">Método da Eliminação do Candidato Mais Fraco</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-distribuicao-dos-restos">Método da Distribuição dos Restos</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacoes-praticas-de-partilhas">3.3. Aplicações Práticas de Partilhas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-de-recursos-em-organizacoes">3.3.1. Distribuição de Recursos em Organizações</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divisao-de-herancas">3.3.2. Divisão de Heranças</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacoes-praticas-de-partilhas">Aplicações Práticas de Partilhas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-de-recursos-em-organizacoes">Distribuição de Recursos em Organizações</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divisao-de-herancas">Divisão de Heranças</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fairness-e-equidade-em-partilhas">3.4. Fairness e Equidade em Partilhas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fairness-e-equidade-em-partilhas">Fairness e Equidade em Partilhas</a></li>
 </ul>
   </nav></div>
 
