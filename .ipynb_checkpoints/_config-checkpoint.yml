@@ -1,5 +1,4 @@
 # Informações básicas do livro
-
 title: Modelos Matemáticos para a Cidadania
 author: Paulo Coelho
 logo: logo.png
@@ -41,6 +40,7 @@ launch_buttons:
   notebook_interface: jupyterlab
   binderhub_url: "https://mybinder.org"
   thebe: true
+  use_jupyter_lab: true
 
 # Configurações de análise e renderização
 parse:
@@ -64,15 +64,16 @@ sphinx:
       - https://unpkg.com/thebe@latest/lib/index.js
     html_theme_options:
       use_download_button: true
-      repository_url: https://github.com/seu-usuario/seu-repositorio
+      repository_url: https://github.com/pjocoelho/JupyterBook_10
       use_issues_button: true
       use_repository_button: true
       use_edit_page_button: true
+      use_thebe: true
       launch_buttons:
         thebe: true
         notebook_interface: "jupyterlab"
     thebe_config:
-      repository_url: https://github.com/seu-usuario/seu-repositorio
+      repository_url: https://github.com/pjocoelho/JupyterBook_10
       repository_branch: main
       kernel_name: python3
       debug: false
