@@ -1,0 +1,19 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Cap_01
+- file: Cap_02
+- file: Cap_03
+- file: Cap_04
+
+# Linhas para habilitar botões de execução em todos os capítulos
+options:
+  numbered: true
+  toc_depth: 3
+  launch_buttons:
+    notebook_interface: "jupyterlab"
+    binderhub_url: "https://mybinder.org"
+    thebe: true

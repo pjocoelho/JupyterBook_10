@@ -1,0 +1,89 @@
+# Informações básicas do livro
+
+title: Modelos Matemáticos para a Cidadania
+author: Paulo Coelho
+logo: logo.png
+copyright: "2024"
+
+# Configurações de execução
+execute:
+  execute_notebooks: force
+  timeout: 100
+  allow_errors: false
+
+# Configurações LaTeX (se necessário)
+latex:
+  latex_engine: pdflatex
+
+# Informações do repositório
+repository:
+  url: https://github.com/pjocoelho/JupyterBook_10
+  path_to_book: .
+  branch: main
+
+# Opções específicas HTML
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  comments:
+    hypothesis: true
+  extra_navbar: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  extra_footer: |
+    <p>
+      Seu livro é licenciado sob uma 
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional</a>.
+    </p>
+  use_download_button: true
+
+# Configurações de botões de lançamento
+launch_buttons:
+  notebook_interface: jupyterlab
+  binderhub_url: "https://mybinder.org"
+  thebe: true
+
+# Configurações de análise e renderização
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+
+# Configurações do Sphinx
+sphinx:
+  config:
+    html_js_files:
+      - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+      - https://unpkg.com/thebe@latest/lib/index.js
+    html_theme_options:
+      use_download_button: true
+      repository_url: https://github.com/seu-usuario/seu-repositorio
+      use_issues_button: true
+      use_repository_button: true
+      use_edit_page_button: true
+      launch_buttons:
+        thebe: true
+        notebook_interface: "jupyterlab"
+    thebe_config:
+      repository_url: https://github.com/seu-usuario/seu-repositorio
+      repository_branch: main
+      kernel_name: python3
+      debug: false
+      requestKernel: true
+      mount_activate_widget: true
+  extra_extensions:
+    - sphinx_thebe
+
+# Configurações de numeração de figuras e tabelas
+numfig: true
+numfig_secnum_depth: 2
+
+# Configurações da tabela de conteúdos
+only_build_toc_files: false

@@ -1,0 +1,8 @@
+jupyter-book
+notebook
+matplotlib
+numpy
+scipy
+pandas
+ipywidgets
+sphinx-thebe
