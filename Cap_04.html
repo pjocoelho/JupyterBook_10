@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5. Modelos Matemáticos em Finanças Pessoais &#8212; Modelos Matemáticos para a Cidadania</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Cap_04';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="4. Modelos Matemáticos nas Partilhas" href="Cap_03.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Modelos Matemáticos para a Cidadania - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Modelos Matemáticos para a Cidadania - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Cap_01.html">1. Introdução aos Modelos Matemáticos na Cidadania</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Cap_02.html">3. Modelos Matemáticos nas Eleições</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cap_03.html">4. Modelos Matemáticos nas Partilhas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Modelos Matemáticos em Finanças Pessoais</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/seu-usuario/seu-repositorio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/seu-usuario/seu-repositorio/edit/main/Cap_04.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/seu-usuario/seu-repositorio/issues/new?title=Issue%20on%20page%20%2FCap_04.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Cap_04.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modelos Matemáticos em Finanças Pessoais</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-de-salarios">5.1. Cálculo de Salários</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#salario-bruto-vs-salario-liquido">5.1.1. Salário Bruto vs. Salário Líquido</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impostos-e-contribuicoes">5.1.2. Impostos e Contribuições</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-tributario">5.2. Sistema Tributário</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-do-irs">5.2.1. Cálculo do IRS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#progressividade-dos-impostos">5.2.2. Progressividade dos Impostos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-e-investimentos">5.3. Juros e Investimentos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-simples">5.3.1. Juros Simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-compostos">5.3.2. Juros Compostos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-presente-e-valor-futuro">5.3.3. Valor Presente e Valor Futuro</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emprestimos-e-financiamentos">5.4. Empréstimos e Financiamentos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#amortizacao-de-emprestimos">5.4.1. Amortização de Empréstimos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-de-prestacoes">5.4.2. Cálculo de Prestações</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="modelos-matematicos-em-financas-pessoais">
+<h1><span class="section-number">5. </span>Modelos Matemáticos em Finanças Pessoais<a class="headerlink" href="#modelos-matematicos-em-financas-pessoais" title="Link to this heading">#</a></h1>
+<section id="calculo-de-salarios">
+<h2><span class="section-number">5.1. </span>Cálculo de Salários<a class="headerlink" href="#calculo-de-salarios" title="Link to this heading">#</a></h2>
+<section id="salario-bruto-vs-salario-liquido">
+<h3><span class="section-number">5.1.1. </span>Salário Bruto vs. Salário Líquido<a class="headerlink" href="#salario-bruto-vs-salario-liquido" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcular_salario_liquido</span><span class="p">(</span><span class="n">salario_bruto</span><span class="p">,</span> <span class="n">taxa_ss</span><span class="o">=</span><span class="mf">0.11</span><span class="p">,</span> <span class="n">taxa_irs</span><span class="o">=</span><span class="mf">0.15</span><span class="p">):</span>
+    <span class="n">ss</span> <span class="o">=</span> <span class="n">salario_bruto</span> <span class="o">*</span> <span class="n">taxa_ss</span>
+    <span class="n">irs</span> <span class="o">=</span> <span class="n">salario_bruto</span> <span class="o">*</span> <span class="n">taxa_irs</span>
+    <span class="n">salario_liquido</span> <span class="o">=</span> <span class="n">salario_bruto</span> <span class="o">-</span> <span class="n">ss</span> <span class="o">-</span> <span class="n">irs</span>
+    <span class="k">return</span> <span class="n">salario_liquido</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">irs</span>
+
+<span class="c1"># Exemplo</span>
+<span class="n">salario_bruto</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">liquido</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">irs</span> <span class="o">=</span> <span class="n">calcular_salario_liquido</span><span class="p">(</span><span class="n">salario_bruto</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Salário Bruto: </span><span class="si">{</span><span class="n">salario_bruto</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Segurança Social: </span><span class="si">{</span><span class="n">ss</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IRS: </span><span class="si">{</span><span class="n">irs</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Salário Líquido: </span><span class="si">{</span><span class="n">liquido</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Salário Bruto: 2000.00
+Segurança Social: 220.00
+IRS: 300.00
+Salário Líquido: 1480.00
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="impostos-e-contribuicoes">
+<h3><span class="section-number">5.1.2. </span>Impostos e Contribuições<a class="headerlink" href="#impostos-e-contribuicoes" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcular_impostos_progressivos</span><span class="p">(</span><span class="n">rendimento_anual</span><span class="p">):</span>
+    <span class="n">escaloes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">7112</span><span class="p">,</span> <span class="mf">0.145</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">10732</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">20322</span><span class="p">,</span> <span class="mf">0.28</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">25075</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">36967</span><span class="p">,</span> <span class="mf">0.37</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">80882</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">),</span>
+        <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span> <span class="mf">0.48</span><span class="p">)</span>
+    <span class="p">]</span>
+    
+    <span class="n">imposto</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">rendimento_restante</span> <span class="o">=</span> <span class="n">rendimento_anual</span>
+    
+    <span class="k">for</span> <span class="n">limite</span><span class="p">,</span> <span class="n">taxa</span> <span class="ow">in</span> <span class="n">escaloes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">rendimento_restante</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">rendimento_tributavel</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">rendimento_restante</span><span class="p">,</span> <span class="n">limite</span><span class="p">)</span>
+            <span class="n">imposto</span> <span class="o">+=</span> <span class="n">rendimento_tributavel</span> <span class="o">*</span> <span class="n">taxa</span>
+            <span class="n">rendimento_restante</span> <span class="o">-=</span> <span class="n">rendimento_tributavel</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+    
+    <span class="k">return</span> <span class="n">imposto</span>
+
+<span class="c1"># Exemplo</span>
+<span class="n">rendimento_anual</span> <span class="o">=</span> <span class="mi">30000</span>
+<span class="n">imposto_devido</span> <span class="o">=</span> <span class="n">calcular_impostos_progressivos</span><span class="p">(</span><span class="n">rendimento_anual</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rendimento Anual: </span><span class="si">{</span><span class="n">rendimento_anual</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Imposto Devido: </span><span class="si">{</span><span class="n">imposto_devido</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Taxa Efetiva de Imposto: </span><span class="si">{</span><span class="p">(</span><span class="n">imposto_devido</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">rendimento_anual</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rendimento Anual: 30000.00
+Imposto Devido: 6903.28
+Taxa Efetiva de Imposto: 23.01%
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sistema-tributario">
+<h2><span class="section-number">5.2. </span>Sistema Tributário<a class="headerlink" href="#sistema-tributario" title="Link to this heading">#</a></h2>
+<section id="calculo-do-irs">
+<h3><span class="section-number">5.2.1. </span>Cálculo do IRS<a class="headerlink" href="#calculo-do-irs" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcular_irs</span><span class="p">(</span><span class="n">rendimento_anual</span><span class="p">,</span> <span class="n">deducoes</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">rendimento_coletavel</span> <span class="o">=</span> <span class="n">rendimento_anual</span> <span class="o">-</span> <span class="n">deducoes</span>
+    <span class="n">imposto_bruto</span> <span class="o">=</span> <span class="n">calcular_impostos_progressivos</span><span class="p">(</span><span class="n">rendimento_coletavel</span><span class="p">)</span>
+    
+    <span class="c1"># Simulação de deduções à coleta</span>
+    <span class="n">deducoes_coleta</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">imposto_bruto</span> <span class="o">*</span> <span class="mf">0.10</span><span class="p">)</span>
+    
+    <span class="n">imposto_final</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">imposto_bruto</span> <span class="o">-</span> <span class="n">deducoes_coleta</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">imposto_final</span>
+
+<span class="c1"># Exemplo</span>
+<span class="n">rendimento_anual</span> <span class="o">=</span> <span class="mi">35000</span>
+<span class="n">deducoes</span> <span class="o">=</span> <span class="mi">4000</span>
+
+<span class="n">irs</span> <span class="o">=</span> <span class="n">calcular_irs</span><span class="p">(</span><span class="n">rendimento_anual</span><span class="p">,</span> <span class="n">deducoes</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rendimento Anual: </span><span class="si">{</span><span class="n">rendimento_anual</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deduções: </span><span class="si">{</span><span class="n">deducoes</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IRS a pagar: </span><span class="si">{</span><span class="n">irs</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rendimento Anual: 35000.00
+Deduções: 4000.00
+IRS a pagar: 6464.95
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="progressividade-dos-impostos">
+<h3><span class="section-number">5.2.2. </span>Progressividade dos Impostos<a class="headerlink" href="#progressividade-dos-impostos" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">analisar_progressividade</span><span class="p">():</span>
+    <span class="n">rendimentos</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="n">taxas_efetivas</span> <span class="o">=</span> <span class="p">[(</span><span class="n">calcular_irs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">/</span> <span class="n">r</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rendimentos</span><span class="p">]</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rendimentos</span><span class="p">,</span> <span class="n">taxas_efetivas</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Progressividade do IRS&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Rendimento Anual&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Taxa Efetiva de Imposto (%)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">analisar_progressividade</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3355e4a4f83194b7c4f8e81255a82bd9326c8c24b32d4576039ef97b2125a3e6.png" src="_images/3355e4a4f83194b7c4f8e81255a82bd9326c8c24b32d4576039ef97b2125a3e6.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="juros-e-investimentos">
+<h2><span class="section-number">5.3. </span>Juros e Investimentos<a class="headerlink" href="#juros-e-investimentos" title="Link to this heading">#</a></h2>
+<section id="juros-simples">
+<h3><span class="section-number">5.3.1. </span>Juros Simples<a class="headerlink" href="#juros-simples" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">juros_simples</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">taxa</span><span class="p">,</span> <span class="n">tempo</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">principal</span> <span class="o">*</span> <span class="n">taxa</span> <span class="o">*</span> <span class="n">tempo</span>
+
+<span class="c1"># Exemplo</span>
+<span class="n">principal</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">taxa_anual</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">anos</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">juros</span> <span class="o">=</span> <span class="n">juros_simples</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">taxa_anual</span><span class="p">,</span> <span class="n">anos</span><span class="p">)</span>
+<span class="n">montante</span> <span class="o">=</span> <span class="n">principal</span> <span class="o">+</span> <span class="n">juros</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Investimento inicial: </span><span class="si">{</span><span class="n">principal</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Juros acumulados: </span><span class="si">{</span><span class="n">juros</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Montante final: </span><span class="si">{</span><span class="n">montante</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Investimento inicial: 1000.00
+Juros acumulados: 250.00
+Montante final: 1250.00
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="juros-compostos">
+<h3><span class="section-number">5.3.2. </span>Juros Compostos<a class="headerlink" href="#juros-compostos" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">juros_compostos</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">taxa</span><span class="p">,</span> <span class="n">tempo</span><span class="p">,</span> <span class="n">periodos</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">principal</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taxa</span><span class="o">/</span><span class="n">periodos</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">tempo</span> <span class="o">*</span> <span class="n">periodos</span><span class="p">)</span>
+
+<span class="c1"># Exemplo</span>
+<span class="n">principal</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">taxa_anual</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">anos</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">periodos_por_ano</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># capitalização mensal</span>
+
+<span class="n">montante</span> <span class="o">=</span> <span class="n">juros_compostos</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">taxa_anual</span><span class="p">,</span> <span class="n">anos</span><span class="p">,</span> <span class="n">periodos_por_ano</span><span class="p">)</span>
+<span class="n">juros</span> <span class="o">=</span> <span class="n">montante</span> <span class="o">-</span> <span class="n">principal</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Investimento inicial: </span><span class="si">{</span><span class="n">principal</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Juros acumulados: </span><span class="si">{</span><span class="n">juros</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Montante final: </span><span class="si">{</span><span class="n">montante</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Investimento inicial: 1000.00
+Juros acumulados: 283.36
+Montante final: 1283.36
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="valor-presente-e-valor-futuro">
+<h3><span class="section-number">5.3.3. </span>Valor Presente e Valor Futuro<a class="headerlink" href="#valor-presente-e-valor-futuro" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valor_presente</span><span class="p">(</span><span class="n">valor_futuro</span><span class="p">,</span> <span class="n">taxa</span><span class="p">,</span> <span class="n">tempo</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">valor_futuro</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taxa</span><span class="p">)</span> <span class="o">**</span> <span class="n">tempo</span>
+
+<span class="k">def</span> <span class="nf">valor_futuro</span><span class="p">(</span><span class="n">valor_presente</span><span class="p">,</span> <span class="n">taxa</span><span class="p">,</span> <span class="n">tempo</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">valor_presente</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taxa</span><span class="p">)</span> <span class="o">**</span> <span class="n">tempo</span>
+
+<span class="c1"># Exemplo</span>
+<span class="n">valor_futuro_desejado</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">taxa_anual</span> <span class="o">=</span> <span class="mf">0.06</span>
+<span class="n">anos</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">valor_presente_necessario</span> <span class="o">=</span> <span class="n">valor_presente</span><span class="p">(</span><span class="n">valor_futuro_desejado</span><span class="p">,</span> <span class="n">taxa_anual</span><span class="p">,</span> <span class="n">anos</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Para ter </span><span class="si">{</span><span class="n">valor_futuro_desejado</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> daqui a </span><span class="si">{</span><span class="n">anos</span><span class="si">}</span><span class="s2"> anos,&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;você precisa investir hoje: </span><span class="si">{</span><span class="n">valor_presente_necessario</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Para ter 10000.00 daqui a 10 anos,
+você precisa investir hoje: 5583.95
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="emprestimos-e-financiamentos">
+<h2><span class="section-number">5.4. </span>Empréstimos e Financiamentos<a class="headerlink" href="#emprestimos-e-financiamentos" title="Link to this heading">#</a></h2>
+<section id="amortizacao-de-emprestimos">
+<h3><span class="section-number">5.4.1. </span>Amortização de Empréstimos<a class="headerlink" href="#amortizacao-de-emprestimos" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcular_amortizacao</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">taxa_anual</span><span class="p">,</span> <span class="n">anos</span><span class="p">):</span>
+    <span class="n">taxa_mensal</span> <span class="o">=</span> <span class="n">taxa_anual</span> <span class="o">/</span> <span class="mi">12</span>
+    <span class="n">num_pagamentos</span> <span class="o">=</span> <span class="n">anos</span> <span class="o">*</span> <span class="mi">12</span>
+    
+    <span class="n">pagamento_mensal</span> <span class="o">=</span> <span class="p">(</span><span class="n">principal</span> <span class="o">*</span> <span class="n">taxa_mensal</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taxa_mensal</span><span class="p">)</span> <span class="o">**</span> <span class="n">num_pagamentos</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taxa_mensal</span><span class="p">)</span> <span class="o">**</span> <span class="n">num_pagamentos</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">saldo</span> <span class="o">=</span> <span class="n">principal</span>
+    <span class="n">amortizacao_total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">juros_total</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mês | Pagamento | Principal | Juros | Saldo&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----|-----------|-----------|-------|------&quot;</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">mes</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_pagamentos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">juros</span> <span class="o">=</span> <span class="n">saldo</span> <span class="o">*</span> <span class="n">taxa_mensal</span>
+        <span class="n">amortizacao</span> <span class="o">=</span> <span class="n">pagamento_mensal</span> <span class="o">-</span> <span class="n">juros</span>
+        <span class="n">saldo</span> <span class="o">-=</span> <span class="n">amortizacao</span>
+        
+        <span class="n">amortizacao_total</span> <span class="o">+=</span> <span class="n">amortizacao</span>
+        <span class="n">juros_total</span> <span class="o">+=</span> <span class="n">juros</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mes</span><span class="si">:</span><span class="s2">4d</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">pagamento_mensal</span><span class="si">:</span><span class="s2">9.2f</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">amortizacao</span><span class="si">:</span><span class="s2">9.2f</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">juros</span><span class="si">:</span><span class="s2">5.2f</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">saldo</span><span class="si">:</span><span class="s2">6.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total pago: </span><span class="si">{</span><span class="n">pagamento_mensal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_pagamentos</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total de juros: </span><span class="si">{</span><span class="n">juros_total</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Exemplo</span>
+<span class="n">principal</span> <span class="o">=</span> <span class="mi">200000</span>
+<span class="n">taxa_anual</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">anos</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="n">calcular_amortizacao</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">taxa_anual</span><span class="p">,</span> <span class="n">anos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mês | Pagamento | Principal | Juros | Saldo
+----|-----------|-----------|-------|------
+   1 |   1073.64 |    240.31 | 833.33 | 199759.69
+   2 |   1073.64 |    241.31 | 832.33 | 199518.38
+   3 |   1073.64 |    242.32 | 831.33 | 199276.06
+   4 |   1073.64 |    243.33 | 830.32 | 199032.74
+   5 |   1073.64 |    244.34 | 829.30 | 198788.40
+   6 |   1073.64 |    245.36 | 828.28 | 198543.04
+   7 |   1073.64 |    246.38 | 827.26 | 198296.66
+   8 |   1073.64 |    247.41 | 826.24 | 198049.25
+   9 |   1073.64 |    248.44 | 825.21 | 197800.81
+  10 |   1073.64 |    249.47 | 824.17 | 197551.34
+  11 |   1073.64 |    250.51 | 823.13 | 197300.83
+  12 |   1073.64 |    251.56 | 822.09 | 197049.27
+  13 |   1073.64 |    252.60 | 821.04 | 196796.66
+  14 |   1073.64 |    253.66 | 819.99 | 196543.01
+  15 |   1073.64 |    254.71 | 818.93 | 196288.29
+  16 |   1073.64 |    255.78 | 817.87 | 196032.52
+  17 |   1073.64 |    256.84 | 816.80 | 195775.68
+  18 |   1073.64 |    257.91 | 815.73 | 195517.77
+  19 |   1073.64 |    258.99 | 814.66 | 195258.78
+  20 |   1073.64 |    260.06 | 813.58 | 194998.71
+  21 |   1073.64 |    261.15 | 812.49 | 194737.57
+  22 |   1073.64 |    262.24 | 811.41 | 194475.33
+  23 |   1073.64 |    263.33 | 810.31 | 194212.00
+  24 |   1073.64 |    264.43 | 809.22 | 193947.57
+  25 |   1073.64 |    265.53 | 808.11 | 193682.05
+  26 |   1073.64 |    266.63 | 807.01 | 193415.41
+  27 |   1073.64 |    267.75 | 805.90 | 193147.66
+  28 |   1073.64 |    268.86 | 804.78 | 192878.80
+  29 |   1073.64 |    269.98 | 803.66 | 192608.82
+  30 |   1073.64 |    271.11 | 802.54 | 192337.72
+  31 |   1073.64 |    272.24 | 801.41 | 192065.48
+  32 |   1073.64 |    273.37 | 800.27 | 191792.11
+  33 |   1073.64 |    274.51 | 799.13 | 191517.60
+  34 |   1073.64 |    275.65 | 797.99 | 191241.95
+  35 |   1073.64 |    276.80 | 796.84 | 190965.14
+  36 |   1073.64 |    277.96 | 795.69 | 190687.19
+  37 |   1073.64 |    279.11 | 794.53 | 190408.08
+  38 |   1073.64 |    280.28 | 793.37 | 190127.80
+  39 |   1073.64 |    281.44 | 792.20 | 189846.36
+  40 |   1073.64 |    282.62 | 791.03 | 189563.74
+  41 |   1073.64 |    283.79 | 789.85 | 189279.94
+  42 |   1073.64 |    284.98 | 788.67 | 188994.97
+  43 |   1073.64 |    286.16 | 787.48 | 188708.80
+  44 |   1073.64 |    287.36 | 786.29 | 188421.45
+  45 |   1073.64 |    288.55 | 785.09 | 188132.89
+  46 |   1073.64 |    289.76 | 783.89 | 187843.14
+  47 |   1073.64 |    290.96 | 782.68 | 187552.17
+  48 |   1073.64 |    292.18 | 781.47 | 187260.00
+  49 |   1073.64 |    293.39 | 780.25 | 186966.60
+  50 |   1073.64 |    294.62 | 779.03 | 186671.99
+  51 |   1073.64 |    295.84 | 777.80 | 186376.15
+  52 |   1073.64 |    297.08 | 776.57 | 186079.07
+  53 |   1073.64 |    298.31 | 775.33 | 185780.76
+  54 |   1073.64 |    299.56 | 774.09 | 185481.20
+  55 |   1073.64 |    300.80 | 772.84 | 185180.39
+  56 |   1073.64 |    302.06 | 771.58 | 184878.34
+  57 |   1073.64 |    303.32 | 770.33 | 184575.02
+  58 |   1073.64 |    304.58 | 769.06 | 184270.44
+  59 |   1073.64 |    305.85 | 767.79 | 183964.59
+  60 |   1073.64 |    307.12 | 766.52 | 183657.46
+  61 |   1073.64 |    308.40 | 765.24 | 183349.06
+  62 |   1073.64 |    309.69 | 763.95 | 183039.37
+  63 |   1073.64 |    310.98 | 762.66 | 182728.39
+  64 |   1073.64 |    312.27 | 761.37 | 182416.12
+  65 |   1073.64 |    313.58 | 760.07 | 182102.54
+  66 |   1073.64 |    314.88 | 758.76 | 181787.66
+  67 |   1073.64 |    316.19 | 757.45 | 181471.46
+  68 |   1073.64 |    317.51 | 756.13 | 181153.95
+  69 |   1073.64 |    318.84 | 754.81 | 180835.12
+  70 |   1073.64 |    320.16 | 753.48 | 180514.95
+  71 |   1073.64 |    321.50 | 752.15 | 180193.46
+  72 |   1073.64 |    322.84 | 750.81 | 179870.62
+  73 |   1073.64 |    324.18 | 749.46 | 179546.44
+  74 |   1073.64 |    325.53 | 748.11 | 179220.90
+  75 |   1073.64 |    326.89 | 746.75 | 178894.01
+  76 |   1073.64 |    328.25 | 745.39 | 178565.76
+  77 |   1073.64 |    329.62 | 744.02 | 178236.14
+  78 |   1073.64 |    330.99 | 742.65 | 177905.15
+  79 |   1073.64 |    332.37 | 741.27 | 177572.78
+  80 |   1073.64 |    333.76 | 739.89 | 177239.02
+  81 |   1073.64 |    335.15 | 738.50 | 176903.87
+  82 |   1073.64 |    336.54 | 737.10 | 176567.33
+  83 |   1073.64 |    337.95 | 735.70 | 176229.38
+  84 |   1073.64 |    339.35 | 734.29 | 175890.03
+  85 |   1073.64 |    340.77 | 732.88 | 175549.26
+  86 |   1073.64 |    342.19 | 731.46 | 175207.07
+  87 |   1073.64 |    343.61 | 730.03 | 174863.46
+  88 |   1073.64 |    345.05 | 728.60 | 174518.41
+  89 |   1073.64 |    346.48 | 727.16 | 174171.93
+  90 |   1073.64 |    347.93 | 725.72 | 173824.00
+  91 |   1073.64 |    349.38 | 724.27 | 173474.63
+  92 |   1073.64 |    350.83 | 722.81 | 173123.80
+  93 |   1073.64 |    352.29 | 721.35 | 172771.50
+  94 |   1073.64 |    353.76 | 719.88 | 172417.74
+  95 |   1073.64 |    355.24 | 718.41 | 172062.50
+  96 |   1073.64 |    356.72 | 716.93 | 171705.79
+  97 |   1073.64 |    358.20 | 715.44 | 171347.59
+  98 |   1073.64 |    359.69 | 713.95 | 170987.89
+  99 |   1073.64 |    361.19 | 712.45 | 170626.70
+ 100 |   1073.64 |    362.70 | 710.94 | 170264.00
+ 101 |   1073.64 |    364.21 | 709.43 | 169899.79
+ 102 |   1073.64 |    365.73 | 707.92 | 169534.06
+ 103 |   1073.64 |    367.25 | 706.39 | 169166.81
+ 104 |   1073.64 |    368.78 | 704.86 | 168798.03
+ 105 |   1073.64 |    370.32 | 703.33 | 168427.71
+ 106 |   1073.64 |    371.86 | 701.78 | 168055.85
+ 107 |   1073.64 |    373.41 | 700.23 | 167682.44
+ 108 |   1073.64 |    374.97 | 698.68 | 167307.47
+ 109 |   1073.64 |    376.53 | 697.11 | 166930.94
+ 110 |   1073.64 |    378.10 | 695.55 | 166552.85
+ 111 |   1073.64 |    379.67 | 693.97 | 166173.17
+ 112 |   1073.64 |    381.26 | 692.39 | 165791.92
+ 113 |   1073.64 |    382.84 | 690.80 | 165409.07
+ 114 |   1073.64 |    384.44 | 689.20 | 165024.63
+ 115 |   1073.64 |    386.04 | 687.60 | 164638.59
+ 116 |   1073.64 |    387.65 | 685.99 | 164250.94
+ 117 |   1073.64 |    389.26 | 684.38 | 163861.68
+ 118 |   1073.64 |    390.89 | 682.76 | 163470.79
+ 119 |   1073.64 |    392.51 | 681.13 | 163078.28
+ 120 |   1073.64 |    394.15 | 679.49 | 162684.13
+ 121 |   1073.64 |    395.79 | 677.85 | 162288.34
+ 122 |   1073.64 |    397.44 | 676.20 | 161890.89
+ 123 |   1073.64 |    399.10 | 674.55 | 161491.80
+ 124 |   1073.64 |    400.76 | 672.88 | 161091.04
+ 125 |   1073.64 |    402.43 | 671.21 | 160688.61
+ 126 |   1073.64 |    404.11 | 669.54 | 160284.50
+ 127 |   1073.64 |    405.79 | 667.85 | 159878.71
+ 128 |   1073.64 |    407.48 | 666.16 | 159471.22
+ 129 |   1073.64 |    409.18 | 664.46 | 159062.04
+ 130 |   1073.64 |    410.88 | 662.76 | 158651.16
+ 131 |   1073.64 |    412.60 | 661.05 | 158238.56
+ 132 |   1073.64 |    414.32 | 659.33 | 157824.25
+ 133 |   1073.64 |    416.04 | 657.60 | 157408.21
+ 134 |   1073.64 |    417.78 | 655.87 | 156990.43
+ 135 |   1073.64 |    419.52 | 654.13 | 156570.91
+ 136 |   1073.64 |    421.26 | 652.38 | 156149.65
+ 137 |   1073.64 |    423.02 | 650.62 | 155726.63
+ 138 |   1073.64 |    424.78 | 648.86 | 155301.85
+ 139 |   1073.64 |    426.55 | 647.09 | 154875.29
+ 140 |   1073.64 |    428.33 | 645.31 | 154446.96
+ 141 |   1073.64 |    430.11 | 643.53 | 154016.85
+ 142 |   1073.64 |    431.91 | 641.74 | 153584.94
+ 143 |   1073.64 |    433.71 | 639.94 | 153151.24
+ 144 |   1073.64 |    435.51 | 638.13 | 152715.73
+ 145 |   1073.64 |    437.33 | 636.32 | 152278.40
+ 146 |   1073.64 |    439.15 | 634.49 | 151839.25
+ 147 |   1073.64 |    440.98 | 632.66 | 151398.27
+ 148 |   1073.64 |    442.82 | 630.83 | 150955.45
+ 149 |   1073.64 |    444.66 | 628.98 | 150510.79
+ 150 |   1073.64 |    446.51 | 627.13 | 150064.27
+ 151 |   1073.64 |    448.38 | 625.27 | 149615.90
+ 152 |   1073.64 |    450.24 | 623.40 | 149165.65
+ 153 |   1073.64 |    452.12 | 621.52 | 148713.53
+ 154 |   1073.64 |    454.00 | 619.64 | 148259.53
+ 155 |   1073.64 |    455.90 | 617.75 | 147803.64
+ 156 |   1073.64 |    457.79 | 615.85 | 147345.84
+ 157 |   1073.64 |    459.70 | 613.94 | 146886.14
+ 158 |   1073.64 |    461.62 | 612.03 | 146424.52
+ 159 |   1073.64 |    463.54 | 610.10 | 145960.98
+ 160 |   1073.64 |    465.47 | 608.17 | 145495.51
+ 161 |   1073.64 |    467.41 | 606.23 | 145028.10
+ 162 |   1073.64 |    469.36 | 604.28 | 144558.74
+ 163 |   1073.64 |    471.32 | 602.33 | 144087.42
+ 164 |   1073.64 |    473.28 | 600.36 | 143614.14
+ 165 |   1073.64 |    475.25 | 598.39 | 143138.89
+ 166 |   1073.64 |    477.23 | 596.41 | 142661.66
+ 167 |   1073.64 |    479.22 | 594.42 | 142182.44
+ 168 |   1073.64 |    481.22 | 592.43 | 141701.22
+ 169 |   1073.64 |    483.22 | 590.42 | 141218.00
+ 170 |   1073.64 |    485.23 | 588.41 | 140732.77
+ 171 |   1073.64 |    487.26 | 586.39 | 140245.51
+ 172 |   1073.64 |    489.29 | 584.36 | 139756.22
+ 173 |   1073.64 |    491.33 | 582.32 | 139264.90
+ 174 |   1073.64 |    493.37 | 580.27 | 138771.53
+ 175 |   1073.64 |    495.43 | 578.21 | 138276.10
+ 176 |   1073.64 |    497.49 | 576.15 | 137778.60
+ 177 |   1073.64 |    499.57 | 574.08 | 137279.04
+ 178 |   1073.64 |    501.65 | 572.00 | 136777.39
+ 179 |   1073.64 |    503.74 | 569.91 | 136273.65
+ 180 |   1073.64 |    505.84 | 567.81 | 135767.82
+ 181 |   1073.64 |    507.94 | 565.70 | 135259.87
+ 182 |   1073.64 |    510.06 | 563.58 | 134749.81
+ 183 |   1073.64 |    512.19 | 561.46 | 134237.63
+ 184 |   1073.64 |    514.32 | 559.32 | 133723.31
+ 185 |   1073.64 |    516.46 | 557.18 | 133206.84
+ 186 |   1073.64 |    518.61 | 555.03 | 132688.23
+ 187 |   1073.64 |    520.78 | 552.87 | 132167.45
+ 188 |   1073.64 |    522.95 | 550.70 | 131644.51
+ 189 |   1073.64 |    525.12 | 548.52 | 131119.38
+ 190 |   1073.64 |    527.31 | 546.33 | 130592.07
+ 191 |   1073.64 |    529.51 | 544.13 | 130062.56
+ 192 |   1073.64 |    531.72 | 541.93 | 129530.85
+ 193 |   1073.64 |    533.93 | 539.71 | 128996.91
+ 194 |   1073.64 |    536.16 | 537.49 | 128460.76
+ 195 |   1073.64 |    538.39 | 535.25 | 127922.37
+ 196 |   1073.64 |    540.63 | 533.01 | 127381.74
+ 197 |   1073.64 |    542.89 | 530.76 | 126838.85
+ 198 |   1073.64 |    545.15 | 528.50 | 126293.70
+ 199 |   1073.64 |    547.42 | 526.22 | 125746.28
+ 200 |   1073.64 |    549.70 | 523.94 | 125196.58
+ 201 |   1073.64 |    551.99 | 521.65 | 124644.59
+ 202 |   1073.64 |    554.29 | 519.35 | 124090.30
+ 203 |   1073.64 |    556.60 | 517.04 | 123533.70
+ 204 |   1073.64 |    558.92 | 514.72 | 122974.78
+ 205 |   1073.64 |    561.25 | 512.39 | 122413.53
+ 206 |   1073.64 |    563.59 | 510.06 | 121849.94
+ 207 |   1073.64 |    565.94 | 507.71 | 121284.01
+ 208 |   1073.64 |    568.29 | 505.35 | 120715.72
+ 209 |   1073.64 |    570.66 | 502.98 | 120145.06
+ 210 |   1073.64 |    573.04 | 500.60 | 119572.02
+ 211 |   1073.64 |    575.43 | 498.22 | 118996.59
+ 212 |   1073.64 |    577.82 | 495.82 | 118418.77
+ 213 |   1073.64 |    580.23 | 493.41 | 117838.53
+ 214 |   1073.64 |    582.65 | 490.99 | 117255.88
+ 215 |   1073.64 |    585.08 | 488.57 | 116670.81
+ 216 |   1073.64 |    587.51 | 486.13 | 116083.29
+ 217 |   1073.64 |    589.96 | 483.68 | 115493.33
+ 218 |   1073.64 |    592.42 | 481.22 | 114900.91
+ 219 |   1073.64 |    594.89 | 478.75 | 114306.02
+ 220 |   1073.64 |    597.37 | 476.28 | 113708.65
+ 221 |   1073.64 |    599.86 | 473.79 | 113108.79
+ 222 |   1073.64 |    602.36 | 471.29 | 112506.44
+ 223 |   1073.64 |    604.87 | 468.78 | 111901.57
+ 224 |   1073.64 |    607.39 | 466.26 | 111294.18
+ 225 |   1073.64 |    609.92 | 463.73 | 110684.27
+ 226 |   1073.64 |    612.46 | 461.18 | 110071.81
+ 227 |   1073.64 |    615.01 | 458.63 | 109456.80
+ 228 |   1073.64 |    617.57 | 456.07 | 108839.22
+ 229 |   1073.64 |    620.15 | 453.50 | 108219.08
+ 230 |   1073.64 |    622.73 | 450.91 | 107596.35
+ 231 |   1073.64 |    625.33 | 448.32 | 106971.02
+ 232 |   1073.64 |    627.93 | 445.71 | 106343.09
+ 233 |   1073.64 |    630.55 | 443.10 | 105712.54
+ 234 |   1073.64 |    633.17 | 440.47 | 105079.37
+ 235 |   1073.64 |    635.81 | 437.83 | 104443.56
+ 236 |   1073.64 |    638.46 | 435.18 | 103805.10
+ 237 |   1073.64 |    641.12 | 432.52 | 103163.97
+ 238 |   1073.64 |    643.79 | 429.85 | 102520.18
+ 239 |   1073.64 |    646.48 | 427.17 | 101873.70
+ 240 |   1073.64 |    649.17 | 424.47 | 101224.54
+ 241 |   1073.64 |    651.87 | 421.77 | 100572.66
+ 242 |   1073.64 |    654.59 | 419.05 | 99918.07
+ 243 |   1073.64 |    657.32 | 416.33 | 99260.75
+ 244 |   1073.64 |    660.06 | 413.59 | 98600.70
+ 245 |   1073.64 |    662.81 | 410.84 | 97937.89
+ 246 |   1073.64 |    665.57 | 408.07 | 97272.32
+ 247 |   1073.64 |    668.34 | 405.30 | 96603.98
+ 248 |   1073.64 |    671.13 | 402.52 | 95932.85
+ 249 |   1073.64 |    673.92 | 399.72 | 95258.93
+ 250 |   1073.64 |    676.73 | 396.91 | 94582.20
+ 251 |   1073.64 |    679.55 | 394.09 | 93902.65
+ 252 |   1073.64 |    682.38 | 391.26 | 93220.26
+ 253 |   1073.64 |    685.23 | 388.42 | 92535.04
+ 254 |   1073.64 |    688.08 | 385.56 | 91846.96
+ 255 |   1073.64 |    690.95 | 382.70 | 91156.01
+ 256 |   1073.64 |    693.83 | 379.82 | 90462.18
+ 257 |   1073.64 |    696.72 | 376.93 | 89765.47
+ 258 |   1073.64 |    699.62 | 374.02 | 89065.85
+ 259 |   1073.64 |    702.54 | 371.11 | 88363.31
+ 260 |   1073.64 |    705.46 | 368.18 | 87657.85
+ 261 |   1073.64 |    708.40 | 365.24 | 86949.45
+ 262 |   1073.64 |    711.35 | 362.29 | 86238.09
+ 263 |   1073.64 |    714.32 | 359.33 | 85523.77
+ 264 |   1073.64 |    717.29 | 356.35 | 84806.48
+ 265 |   1073.64 |    720.28 | 353.36 | 84086.20
+ 266 |   1073.64 |    723.28 | 350.36 | 83362.91
+ 267 |   1073.64 |    726.30 | 347.35 | 82636.61
+ 268 |   1073.64 |    729.32 | 344.32 | 81907.29
+ 269 |   1073.64 |    732.36 | 341.28 | 81174.93
+ 270 |   1073.64 |    735.41 | 338.23 | 80439.51
+ 271 |   1073.64 |    738.48 | 335.16 | 79701.03
+ 272 |   1073.64 |    741.56 | 332.09 | 78959.48
+ 273 |   1073.64 |    744.65 | 329.00 | 78214.83
+ 274 |   1073.64 |    747.75 | 325.90 | 77467.09
+ 275 |   1073.64 |    750.86 | 322.78 | 76716.22
+ 276 |   1073.64 |    753.99 | 319.65 | 75962.23
+ 277 |   1073.64 |    757.13 | 316.51 | 75205.10
+ 278 |   1073.64 |    760.29 | 313.35 | 74444.81
+ 279 |   1073.64 |    763.46 | 310.19 | 73681.35
+ 280 |   1073.64 |    766.64 | 307.01 | 72914.71
+ 281 |   1073.64 |    769.83 | 303.81 | 72144.88
+ 282 |   1073.64 |    773.04 | 300.60 | 71371.84
+ 283 |   1073.64 |    776.26 | 297.38 | 70595.58
+ 284 |   1073.64 |    779.49 | 294.15 | 69816.09
+ 285 |   1073.64 |    782.74 | 290.90 | 69033.34
+ 286 |   1073.64 |    786.00 | 287.64 | 68247.34
+ 287 |   1073.64 |    789.28 | 284.36 | 67458.06
+ 288 |   1073.64 |    792.57 | 281.08 | 66665.49
+ 289 |   1073.64 |    795.87 | 277.77 | 65869.62
+ 290 |   1073.64 |    799.19 | 274.46 | 65070.43
+ 291 |   1073.64 |    802.52 | 271.13 | 64267.92
+ 292 |   1073.64 |    805.86 | 267.78 | 63462.06
+ 293 |   1073.64 |    809.22 | 264.43 | 62652.84
+ 294 |   1073.64 |    812.59 | 261.05 | 61840.25
+ 295 |   1073.64 |    815.98 | 257.67 | 61024.27
+ 296 |   1073.64 |    819.38 | 254.27 | 60204.90
+ 297 |   1073.64 |    822.79 | 250.85 | 59382.11
+ 298 |   1073.64 |    826.22 | 247.43 | 58555.89
+ 299 |   1073.64 |    829.66 | 243.98 | 57726.23
+ 300 |   1073.64 |    833.12 | 240.53 | 56893.11
+ 301 |   1073.64 |    836.59 | 237.05 | 56056.53
+ 302 |   1073.64 |    840.07 | 233.57 | 55216.45
+ 303 |   1073.64 |    843.57 | 230.07 | 54372.88
+ 304 |   1073.64 |    847.09 | 226.55 | 53525.79
+ 305 |   1073.64 |    850.62 | 223.02 | 52675.17
+ 306 |   1073.64 |    854.16 | 219.48 | 51821.00
+ 307 |   1073.64 |    857.72 | 215.92 | 50963.28
+ 308 |   1073.64 |    861.30 | 212.35 | 50101.99
+ 309 |   1073.64 |    864.88 | 208.76 | 49237.10
+ 310 |   1073.64 |    868.49 | 205.15 | 48368.61
+ 311 |   1073.64 |    872.11 | 201.54 | 47496.50
+ 312 |   1073.64 |    875.74 | 197.90 | 46620.76
+ 313 |   1073.64 |    879.39 | 194.25 | 45741.37
+ 314 |   1073.64 |    883.05 | 190.59 | 44858.32
+ 315 |   1073.64 |    886.73 | 186.91 | 43971.59
+ 316 |   1073.64 |    890.43 | 183.21 | 43081.16
+ 317 |   1073.64 |    894.14 | 179.50 | 42187.02
+ 318 |   1073.64 |    897.86 | 175.78 | 41289.15
+ 319 |   1073.64 |    901.61 | 172.04 | 40387.55
+ 320 |   1073.64 |    905.36 | 168.28 | 39482.19
+ 321 |   1073.64 |    909.13 | 164.51 | 38573.05
+ 322 |   1073.64 |    912.92 | 160.72 | 37660.13
+ 323 |   1073.64 |    916.73 | 156.92 | 36743.41
+ 324 |   1073.64 |    920.55 | 153.10 | 35822.86
+ 325 |   1073.64 |    924.38 | 149.26 | 34898.48
+ 326 |   1073.64 |    928.23 | 145.41 | 33970.25
+ 327 |   1073.64 |    932.10 | 141.54 | 33038.15
+ 328 |   1073.64 |    935.98 | 137.66 | 32102.16
+ 329 |   1073.64 |    939.88 | 133.76 | 31162.28
+ 330 |   1073.64 |    943.80 | 129.84 | 30218.48
+ 331 |   1073.64 |    947.73 | 125.91 | 29270.74
+ 332 |   1073.64 |    951.68 | 121.96 | 28319.06
+ 333 |   1073.64 |    955.65 | 118.00 | 27363.41
+ 334 |   1073.64 |    959.63 | 114.01 | 26403.79
+ 335 |   1073.64 |    963.63 | 110.02 | 25440.16
+ 336 |   1073.64 |    967.64 | 106.00 | 24472.52
+ 337 |   1073.64 |    971.67 | 101.97 | 23500.84
+ 338 |   1073.64 |    975.72 | 97.92 | 22525.12
+ 339 |   1073.64 |    979.79 | 93.85 | 21545.33
+ 340 |   1073.64 |    983.87 | 89.77 | 20561.46
+ 341 |   1073.64 |    987.97 | 85.67 | 19573.49
+ 342 |   1073.64 |    992.09 | 81.56 | 18581.40
+ 343 |   1073.64 |    996.22 | 77.42 | 17585.18
+ 344 |   1073.64 |   1000.37 | 73.27 | 16584.81
+ 345 |   1073.64 |   1004.54 | 69.10 | 15580.27
+ 346 |   1073.64 |   1008.73 | 64.92 | 14571.54
+ 347 |   1073.64 |   1012.93 | 60.71 | 13558.61
+ 348 |   1073.64 |   1017.15 | 56.49 | 12541.47
+ 349 |   1073.64 |   1021.39 | 52.26 | 11520.08
+ 350 |   1073.64 |   1025.64 | 48.00 | 10494.44
+ 351 |   1073.64 |   1029.92 | 43.73 | 9464.52
+ 352 |   1073.64 |   1034.21 | 39.44 | 8430.31
+ 353 |   1073.64 |   1038.52 | 35.13 | 7391.79
+ 354 |   1073.64 |   1042.84 | 30.80 | 6348.95
+ 355 |   1073.64 |   1047.19 | 26.45 | 5301.76
+ 356 |   1073.64 |   1051.55 | 22.09 | 4250.21
+ 357 |   1073.64 |   1055.93 | 17.71 | 3194.27
+ 358 |   1073.64 |   1060.33 | 13.31 | 2133.94
+ 359 |   1073.64 |   1064.75 |  8.89 | 1069.19
+ 360 |   1073.64 |   1069.19 |  4.45 |  -0.00
+
+Total pago: 386511.57
+Total de juros: 186511.57
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculo-de-prestacoes">
+<h3><span class="section-number">5.4.2. </span>Cálculo de Prestações<a class="headerlink" href="#calculo-de-prestacoes" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcular_prestacao</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">taxa_anual</span><span class="p">,</span> <span class="n">anos</span><span class="p">):</span>
+    <span class="n">taxa_mensal</span> <span class="o">=</span> <span class="n">taxa_anual</span> <span class="o">/</span> <span class="mi">12</span>
+    <span class="n">num_pagamentos</span> <span class="o">=</span> <span class="n">anos</span> <span class="o">*</span> <span class="mi">12</span>
+    
+    <span class="n">prestacao</span> <span class="o">=</span> <span class="p">(</span><span class="n">principal</span> <span class="o">*</span> <span class="n">taxa_mensal</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taxa_mensal</span><span class="p">)</span> <span class="o">**</span> <span class="n">num_pagamentos</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taxa_mensal</span><span class="p">)</span> <span class="o">**</span> <span class="n">num_pagamentos</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">prestacao</span>
+
+<span class="c1"># Exemplo</span>
+<span class="n">principal</span> <span class="o">=</span> <span class="mi">150000</span>
+<span class="n">taxa_anual</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">anos</span> <span class="o">=</span> <span class="mi">25</span>
+
+<span class="n">prestacao</span> <span class="o">=</span> <span class="n">calcular_prestacao</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">taxa_anual</span><span class="p">,</span> <span class="n">anos</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empréstimo: </span><span class="si">{</span><span class="n">principal</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Taxa anual: </span><span class="si">{</span><span class="n">taxa_anual</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prazo: </span><span class="si">{</span><span class="n">anos</span><span class="si">}</span><span class="s2"> anos&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prestação mensal: </span><span class="si">{</span><span class="n">prestacao</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Empréstimo: 150000.00
+Taxa anual: 4.00%
+Prazo: 25 anos
+Prestação mensal: 791.76
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "seu-usuario/seu-repositorio",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Cap_03.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Modelos Matemáticos nas Partilhas</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-de-salarios">5.1. Cálculo de Salários</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#salario-bruto-vs-salario-liquido">5.1.1. Salário Bruto vs. Salário Líquido</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impostos-e-contribuicoes">5.1.2. Impostos e Contribuições</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-tributario">5.2. Sistema Tributário</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-do-irs">5.2.1. Cálculo do IRS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#progressividade-dos-impostos">5.2.2. Progressividade dos Impostos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-e-investimentos">5.3. Juros e Investimentos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-simples">5.3.1. Juros Simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-compostos">5.3.2. Juros Compostos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-presente-e-valor-futuro">5.3.3. Valor Presente e Valor Futuro</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emprestimos-e-financiamentos">5.4. Empréstimos e Financiamentos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#amortizacao-de-emprestimos">5.4.1. Amortização de Empréstimos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-de-prestacoes">5.4.2. Cálculo de Prestações</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paulo Coelho
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
