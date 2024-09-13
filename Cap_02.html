@@ -424,14 +424,24 @@ document.write(`
 <section id="maioria-simples">
 <h4><span class="section-number">2.1.1.1. </span>Maioria Simples<a class="headerlink" href="#maioria-simples" title="Link to this heading">#</a></h4>
 <p>O sistema de maioria simples é o mais básico dos sistemas eleitorais. O candidato com mais votos vence, independentemente do número total de votos ou da percentagem alcançada - não é necessário obter mais de 50% dos votos.</p>
-<p><strong>Exemplo</strong></p>
-<div class="cell tag_hide-input docutils container">
+<p><strong>Exercício</strong></p>
+<p>Numa eleição com três candidatos, <em>A</em>, <em>B</em> e <em>C</em>, registaram-se os seguintes votos:</p>
+<ul class="simple">
+<li><p>Candidato <em>A</em> 100 votos</p></li>
+<li><p>Candidato <em>B</em> 80 votos</p></li>
+<li><p>Candidato <em>C</em> 70 votos</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Pela Maioria Simples qual é o vencedor?</p></li>
+<li><p>Copie o código python para o Colab e altere os valores dos votos de cada candidato. Antes de executar o código decida qual é agora o vencedor. Execute o código e confirme.</p></li>
+</ol>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maioria_simples</span><span class="p">(</span><span class="n">votos</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">votos</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
 <span class="n">votos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Candidato A&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;Candidato B&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;Candidato C&#39;</span><span class="p">:</span> <span class="mi">70</span><span class="p">}</span>
@@ -441,31 +451,47 @@ document.write(`
 </div>
 </div>
 </details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O vencedor por maioria simples é: Candidato A
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 <section id="maioria-absoluta">
 <h4><span class="section-number">2.1.1.2. </span>Maioria Absoluta<a class="headerlink" href="#maioria-absoluta" title="Link to this heading">#</a></h4>
 <p>A maioria absoluta requer que o vencedor obtenha o maior número de votos e que seja superior a 50% do total dos votos. Se nenhum candidato alcançar mais de 50% do total de votos.</p>
 <p>Neste sistema pode não existir vencedor em apenas uma volta. Nesse caso recorre-se a uma segunda volta em que participam os dois candidatos mais votados na primeira volta.</p>
-<p><strong>Exemplo</strong></p>
-<div class="cell tag_hide-input docutils container">
+<p><strong>Exercício</strong></p>
+<p>Numa eleição com três candidatos, <em>A</em>, <em>B</em> e <em>C</em>, registaram-se os seguintes votos:</p>
+<ul class="simple">
+<li><p>Candidato <em>A</em> 100 votos</p></li>
+<li><p>Candidato <em>B</em> 80 votos</p></li>
+<li><p>Candidato <em>C</em> 70 votos</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Pela Maioria Absoluta existe vencedor ou é necessário realizar uma segunda volta?</p></li>
+<li><p>Copie o código python para o Colab e altere os valores dos votos de cada candidato. Antes de executar o código decida qual é agora o vencedor, ou se é necessária uma segunda volta. Execute o código e confirme.</p></li>
+</ol>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maioria_absoluta</span><span class="p">(</span><span class="n">votos</span><span class="p">):</span>
     <span class="n">total_votos</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">votos</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
     <span class="k">for</span> <span class="n">candidato</span><span class="p">,</span> <span class="n">num_votos</span> <span class="ow">in</span> <span class="n">votos</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">num_votos</span> <span class="o">&gt;</span> <span class="n">total_votos</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">candidato</span>
-    <span class="k">return</span> <span class="s2">&quot;Segundo turno necessário&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;Segunda volta necessária&quot;</span>
     
 <span class="n">votos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Candidato A&#39;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span> <span class="s1">&#39;Candidato B&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;Candidato C&#39;</span><span class="p">:</span> <span class="mi">70</span><span class="p">}</span>
 <span class="n">resultado</span> <span class="o">=</span> <span class="n">maioria_absoluta</span><span class="p">(</span><span class="n">votos</span><span class="p">)</span>
@@ -474,11 +500,17 @@ document.write(`
 </div>
 </div>
 </details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resultado da eleição por maioria absoluta: Segundo turno necessário
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resultado da eleição por maioria absoluta: Segunda volta necessária
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 </section>
@@ -500,38 +532,59 @@ document.write(`
 <p>Diferença em relação aos sistemas maioritários:</p>
 <p>Nos sistemas maioritários, como a maioria simples ou a maioria absoluta, o foco é em quantos votos diretos o candidato recebe, e o vencedor é quem obtém mais votos, seja de forma relativa (maioria simples) ou com mais de 50% dos votos (maioria absoluta). Esses sistemas não levam em consideração a ordem de preferência dos eleitores entre os diferentes candidatos.</p>
 <p>No Método de Borda, mesmo um candidato que não seja o preferido da maioria absoluta dos eleitores pode vencer, se tiver uma boa pontuação ao ser classificado consistentemente em segundo ou terceiro lugar. Isso contrasta com os sistemas maioritários, nos quais apenas o número de votos diretos decide o vencedor. Portanto, o Método de Borda valoriza o consenso e o apoio relativo mais amplo entre os eleitores, em vez de apenas uma maioria numérica direta.</p>
-<p><strong>Exemplo</strong></p>
-<div class="cell tag_hide-input docutils container">
+<p><strong>Exercício</strong></p>
+<p>Numa eleição com quatro candidatos, <em>A</em>, <em>B</em>, <em>C</em> e <em>D</em>, dos 24 modos distintos de ordenar os candidatos, registaram-se somente cinco modos distintos de ordenação dos candidatos, por ordem decrescente de preferência:</p>
+<p style="text-align: center;">
+  (<i>A</i>, <i>B</i>, <i>C</i>, <i>D</i>);     
+  (<i>B</i>, <i>C</i>, <i>D</i>, <i>A</i>);     
+  (<i>C</i>, <i>D</i>, <i>A</i>, <i>B</i>);     
+  (<i>D</i>, <i>A</i>, <i>B</i>, <i>C</i>);     
+  (<i>C</i>, <i>A</i>, <i>D</i>, <i>B</i>).
+</p>
+<ol class="arabic simple">
+<li><p>Pela Método de Borda qual é o vencedor? Com quantos pontos?</p></li>
+<li><p>Copie o código python para o Colab. Antes de executar o código determine qual é o vencedor. Execute o código e confirme.</p></li>
+<li><p>Experimente aumentar o número modos distintos de ordenar os candidatos, determine qual é então o vencedor e com quantos pontos. Execute o código e confirme.</p></li>
+</ol>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_borda</span><span class="p">(</span><span class="n">preferencias</span><span class="p">):</span>
     <span class="n">pontuacao</span> <span class="o">=</span> <span class="p">{</span><span class="n">candidato</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">candidato</span> <span class="ow">in</span> <span class="n">preferencias</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span>
     <span class="k">for</span> <span class="n">preferencia</span> <span class="ow">in</span> <span class="n">preferencias</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">candidato</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">preferencia</span><span class="p">)):</span>
             <span class="n">pontuacao</span><span class="p">[</span><span class="n">candidato</span><span class="p">]</span> <span class="o">+=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">pontuacao</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">pontuacao</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+    <span class="n">vencedor</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">pontuacao</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">pontuacao</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">vencedor</span><span class="p">,</span> <span class="n">pontuacao</span><span class="p">[</span><span class="n">vencedor</span><span class="p">]</span>
 
 <span class="n">preferencias</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
     <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span>
     <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
+    <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">]</span>
 <span class="p">]</span>
-<span class="n">vencedor</span> <span class="o">=</span> <span class="n">metodo_borda</span><span class="p">(</span><span class="n">preferencias</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;O vencedor pelo método de Borda é: </span><span class="si">{</span><span class="n">vencedor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">vencedor</span><span class="p">,</span> <span class="n">votos_vencedor</span> <span class="o">=</span> <span class="n">metodo_borda</span><span class="p">(</span><span class="n">preferencias</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;O vencedor pelo método de Borda é: </span><span class="si">{</span><span class="n">vencedor</span><span class="si">}</span><span class="s2"> com </span><span class="si">{</span><span class="n">votos_vencedor</span><span class="si">}</span><span class="s2"> votos.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O vencedor pelo método de Borda é: A
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O vencedor pelo método de Borda é: C com 14 votos.
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 </section>
