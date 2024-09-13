@@ -1,6 +1,6 @@
-.blue-background-red-text {
+blue-background-dark-blue-text{
     background-color: #e6f3ff;  /* Um tom claro de azul */
-    color: #006400;             /* Verde escuro */
+    color: #00008B;             /* Azul escuro */
     padding: 15px;
     border-radius: 5px;
 }
