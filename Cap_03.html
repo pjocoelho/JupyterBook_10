@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Modelos Matemáticos nas Partilhas &#8212; Modelos Matemáticos para a Cidadania</title>
+    <title>3. Modelos Matemáticos na Partilha &#8212; Modelos Matemáticos para a Cidadania</title>
   
   
   
@@ -175,7 +175,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Cap_01.html">1. Introdução aos Modelos Matemáticos na Cidadania</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cap_02.html">2. Modelos Matemáticos nas Eleições</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Modelos Matemáticos nas Partilhas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Modelos Matemáticos na Partilha</a></li>
 </ul>
 
     </div>
@@ -378,7 +378,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Modelos Matemáticos nas Partilhas</h1>
+    <h1>Modelos Matemáticos na Partilha</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -388,17 +388,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-distribuicao-de-lugares">3.1. Sistemas de Distribuição de Lugares</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-hondt">3.1.1. Método de Hondt</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-sainte-lague">3.1.2. Método de Sainte-Laguë</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacao-da-comparacao-entre-os-dois-metodos">3.1.3. Visualização da comparação entre os dois métodos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-partilha-proporcional">3.1. Métodos de partilha proporcional</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-distribuicao-de-mandatos">3.2. Sistemas de distribuição de mandatos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-hondt">3.2.1. Método de Hondt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-sainte-lague">3.2.2. Método de Sainte-Laguë</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacao-da-comparacao-entre-os-dois-metodos">3.2.3. Visualização da comparação entre os dois métodos</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">3.2. Análise e Comparação de Sistemas Eleitorais</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-1-maioria-simples">3.2.1. Quiz 1: Maioria Simples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2.2. Quiz 1: Maioria Simples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usar-a-extensao-sphinx-togglebutton-para-quizzes">3.2.3. 4. <strong>Usar a extensão <code class="docutils literal notranslate"><span class="pre">sphinx-togglebutton</span></code> para quizzes</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-com-togglebutton">3.2.3.1. Exemplo com <code class="docutils literal notranslate"><span class="pre">togglebutton</span></code>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">3.3. Análise e Comparação de Sistemas Eleitorais</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-1-maioria-simples">3.3.1. Quiz 1: Maioria Simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.3.2. Quiz 1: Maioria Simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usar-a-extensao-sphinx-togglebutton-para-quizzes">3.3.3. 4. <strong>Usar a extensão <code class="docutils literal notranslate"><span class="pre">sphinx-togglebutton</span></code> para quizzes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-com-togglebutton">3.3.3.1. Exemplo com <code class="docutils literal notranslate"><span class="pre">togglebutton</span></code>:</a></li>
 </ul>
 </li>
 </ul>
@@ -414,13 +415,39 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="modelos-matematicos-nas-partilhas">
-<h1><span class="section-number">3. </span>Modelos Matemáticos nas Partilhas<a class="headerlink" href="#modelos-matematicos-nas-partilhas" title="Link to this heading">#</a></h1>
-<section id="sistemas-de-distribuicao-de-lugares">
-<h2><span class="section-number">3.1. </span>Sistemas de Distribuição de Lugares<a class="headerlink" href="#sistemas-de-distribuicao-de-lugares" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="modelos-matematicos-na-partilha">
+<h1><span class="section-number">3. </span>Modelos Matemáticos na Partilha<a class="headerlink" href="#modelos-matematicos-na-partilha" title="Link to this heading">#</a></h1>
+<p>Os modelos matemáticos de partilha são utilizados para dividir recursos ou bens de forma justa entre várias partes. Pretendem garantir que cada parte recebe uma porção proporcional ao seu direito ou contribuição.</p>
+<p><strong>Aplicações</strong></p>
+<p>Esses modelos são aplicados em diversos contextos:</p>
+<ul class="simple">
+<li><p><strong>Eleições:</strong> Para converter votos em mandatos de forma proporcional.</p></li>
+<li><p><strong>Alocação de Fundos:</strong> Para distribuir recursos financeiros entre diferentes departamentos ou projetos.</p></li>
+<li><p><strong>Divisão de Bens:</strong> Em contextos legais, como heranças ou dissoluções de sociedades.</p></li>
+</ul>
+<p><strong>Princípios Fundamentais</strong></p>
+<ul class="simple">
+<li><p><strong>Princípio da Quota:</strong> Garante que cada parte recebe uma quantidade de recursos dentro de um intervalo específico, baseado na sua proporção de votos ou direitos.</p></li>
+</ul>
+<p><strong>Como Funciona:</strong></p>
+<p><strong>Quota Inferior:</strong> Cada parte deve receber pelo menos a parte inteira da sua quota.</p>
+<p><strong>Quota Superior:</strong> Nenhuma parte deve receber mais do que a parte inteira da sua quota mais um.</p>
+<p><strong>Exemplo:</strong> Se um partido tem direito a 2,4 assentos, ele deve receber pelo menos 2 assentos (quota inferior) e no máximo 3 assentos (quota superior).</p>
+<ul class="simple">
+<li><p><strong>Princípio da Monotonia:</strong> Garante que, se a quantidade total de recursos aumenta, nenhuma parte deve receber menos recursos do que antes. Do mesmo modo, se a quantidade total de recursos diminui, nenhuma parte deve receber mais recursos do que anteriormente.</p></li>
+</ul>
+<p><strong>Como Funciona:</strong></p>
+<p><strong>Monotonia Positiva:</strong> Se o número total de recursos aumenta, a alocação de cada parte não deve diminuir.</p>
+<p><strong>Monotonia Negativa:</strong> Se o número total de recursos diminui, a alocação de cada parte não deve aumentar.</p>
+<p><strong>Exemplo:</strong> Se um partido inicialmente recebe 3 mandatos com 100 mandatos totais, e o número total de mandatos aumenta para 110, o partido não deve receber menos de 3 mandatos.</p>
+<section id="metodos-de-partilha-proporcional">
+<h2><span class="section-number">3.1. </span>Métodos de partilha proporcional<a class="headerlink" href="#metodos-de-partilha-proporcional" title="Link to this heading">#</a></h2>
+</section>
+<section id="sistemas-de-distribuicao-de-mandatos">
+<h2><span class="section-number">3.2. </span>Sistemas de distribuição de mandatos<a class="headerlink" href="#sistemas-de-distribuicao-de-mandatos" title="Link to this heading">#</a></h2>
 <section id="metodo-de-hondt">
-<h3><span class="section-number">3.1.1. </span>Método de Hondt<a class="headerlink" href="#metodo-de-hondt" title="Link to this heading">#</a></h3>
-<p>O método de Hondt é um sistema de representação proporcional usado para atribuir lugares em assembleias legislativas.</p>
+<h3><span class="section-number">3.2.1. </span>Método de Hondt<a class="headerlink" href="#metodo-de-hondt" title="Link to this heading">#</a></h3>
+<p>O método de Hondt é um sistema de representação proporcional usado para atribuir mandatos em assembleias legislativas.</p>
 <p><strong>Exemplo</strong></p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -462,7 +489,7 @@ Partido D: 0 lugares
 </div>
 </section>
 <section id="metodo-de-sainte-lague">
-<h3><span class="section-number">3.1.2. </span>Método de Sainte-Laguë<a class="headerlink" href="#metodo-de-sainte-lague" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.2.2. </span>Método de Sainte-Laguë<a class="headerlink" href="#metodo-de-sainte-lague" title="Link to this heading">#</a></h3>
 <p>O método de Sainte-Laguë é outra forma de distribuição proporcional de assentos, que tende a favorecer partidos menores em comparação com o método de Hondt.</p>
 <p><strong>Exemplo</strong></p>
 <div class="cell tag_hide-input docutils container">
@@ -507,7 +534,7 @@ Partido D: 1 lugares
 </div>
 </section>
 <section id="visualizacao-da-comparacao-entre-os-dois-metodos">
-<h3><span class="section-number">3.1.3. </span>Visualização da comparação entre os dois métodos<a class="headerlink" href="#visualizacao-da-comparacao-entre-os-dois-metodos" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.2.3. </span>Visualização da comparação entre os dois métodos<a class="headerlink" href="#visualizacao-da-comparacao-entre-os-dois-metodos" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -604,7 +631,7 @@ Partido D: 1 lugares
 </section>
 </section>
 <section id="analise-e-comparacao-de-sistemas-eleitorais">
-<h2><span class="section-number">3.2. </span>Análise e Comparação de Sistemas Eleitorais<a class="headerlink" href="#analise-e-comparacao-de-sistemas-eleitorais" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>Análise e Comparação de Sistemas Eleitorais<a class="headerlink" href="#analise-e-comparacao-de-sistemas-eleitorais" title="Link to this heading">#</a></h2>
 <p>Nesta seção, vamos analisar e comparar diferentes sistemas eleitorais, destacando suas vantagens e desvantagens.</p>
 <p>Após executar o código, poderá observar:</p>
 <ul class="simple">
@@ -738,8 +765,8 @@ Explorar como os resultados mudam ao variar o número de candidatos ou eleitores
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resultados das simulações (10000 simulações, 1000 eleitores, 5 candidatos):
 
 Maioria_simples:
-  Vencedor mais frequente: Candidato 4
-  Frequência do vencedor: 20.77%
+  Vencedor mais frequente: Candidato 1
+  Frequência do vencedor: 20.62%
 
 Maioria_absoluta:
   Vencedor mais frequente: Não determinado
@@ -747,15 +774,15 @@ Maioria_absoluta:
   Frequência de segunda volta: 100.00%
 
 Borda:
-  Vencedor mais frequente: Candidato 2
-  Frequência do vencedor: 20.76%
+  Vencedor mais frequente: Candidato 1
+  Frequência do vencedor: 20.68%
 </pre></div>
 </div>
-<img alt="_images/b6291220706ac4ab71dca4cece8910b2b9989d88b6cc2f0d023610106221855c.png" src="_images/b6291220706ac4ab71dca4cece8910b2b9989d88b6cc2f0d023610106221855c.png" />
+<img alt="_images/dfb4274079aca2ba95e0eb22653475d61e0f59de149f2b31310c881c91ccc135.png" src="_images/dfb4274079aca2ba95e0eb22653475d61e0f59de149f2b31310c881c91ccc135.png" />
 </div>
 </div>
 <section id="quiz-1-maioria-simples">
-<h3><span class="section-number">3.2.1. </span>Quiz 1: Maioria Simples<a class="headerlink" href="#quiz-1-maioria-simples" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.3.1. </span>Quiz 1: Maioria Simples<a class="headerlink" href="#quiz-1-maioria-simples" title="Link to this heading">#</a></h3>
 <p>Numa eleição com três candidatos, os votos são distribuídos da seguinte forma:</p>
 <ul class="simple">
 <li><p>A: 45 votos</p></li>
@@ -787,7 +814,7 @@ Borda:
 </div>
 </section>
 <section id="id1">
-<h3><span class="section-number">3.2.2. </span>Quiz 1: Maioria Simples<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.3.2. </span>Quiz 1: Maioria Simples<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Numa eleição com três candidatos, os votos são distribuídos da seguinte forma:</p>
 <ul class="simple">
 <li><p>A: 45 votos</p></li>
@@ -806,10 +833,10 @@ Clique para ver a resposta<div class="sd-summary-down docutils">
 </div>
 </details></section>
 <section id="usar-a-extensao-sphinx-togglebutton-para-quizzes">
-<h3><span class="section-number">3.2.3. </span>4. <strong>Usar a extensão <code class="docutils literal notranslate"><span class="pre">sphinx-togglebutton</span></code> para quizzes</strong><a class="headerlink" href="#usar-a-extensao-sphinx-togglebutton-para-quizzes" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.3.3. </span>4. <strong>Usar a extensão <code class="docutils literal notranslate"><span class="pre">sphinx-togglebutton</span></code> para quizzes</strong><a class="headerlink" href="#usar-a-extensao-sphinx-togglebutton-para-quizzes" title="Link to this heading">#</a></h3>
 <p>Com a extensão <code class="docutils literal notranslate"><span class="pre">sphinx-togglebutton</span></code> (que você já tem habilitada), você pode ocultar a resposta correta e permitir que os alunos revelem a resposta quando quiserem.</p>
 <section id="exemplo-com-togglebutton">
-<h4><span class="section-number">3.2.3.1. </span>Exemplo com <code class="docutils literal notranslate"><span class="pre">togglebutton</span></code>:<a class="headerlink" href="#exemplo-com-togglebutton" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">3.3.3.1. </span>Exemplo com <code class="docutils literal notranslate"><span class="pre">togglebutton</span></code>:<a class="headerlink" href="#exemplo-com-togglebutton" title="Link to this heading">#</a></h4>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">### Quiz 1: Maioria Simples</span>
 
 Numa eleição com três candidatos, os votos são distribuídos da seguinte forma:
@@ -884,17 +911,18 @@ Quem é o vencedor pela maioria simples?
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-distribuicao-de-lugares">3.1. Sistemas de Distribuição de Lugares</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-hondt">3.1.1. Método de Hondt</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-sainte-lague">3.1.2. Método de Sainte-Laguë</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacao-da-comparacao-entre-os-dois-metodos">3.1.3. Visualização da comparação entre os dois métodos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-partilha-proporcional">3.1. Métodos de partilha proporcional</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-distribuicao-de-mandatos">3.2. Sistemas de distribuição de mandatos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-hondt">3.2.1. Método de Hondt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-sainte-lague">3.2.2. Método de Sainte-Laguë</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacao-da-comparacao-entre-os-dois-metodos">3.2.3. Visualização da comparação entre os dois métodos</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">3.2. Análise e Comparação de Sistemas Eleitorais</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-1-maioria-simples">3.2.1. Quiz 1: Maioria Simples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2.2. Quiz 1: Maioria Simples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usar-a-extensao-sphinx-togglebutton-para-quizzes">3.2.3. 4. <strong>Usar a extensão <code class="docutils literal notranslate"><span class="pre">sphinx-togglebutton</span></code> para quizzes</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-com-togglebutton">3.2.3.1. Exemplo com <code class="docutils literal notranslate"><span class="pre">togglebutton</span></code>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">3.3. Análise e Comparação de Sistemas Eleitorais</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-1-maioria-simples">3.3.1. Quiz 1: Maioria Simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.3.2. Quiz 1: Maioria Simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usar-a-extensao-sphinx-togglebutton-para-quizzes">3.3.3. 4. <strong>Usar a extensão <code class="docutils literal notranslate"><span class="pre">sphinx-togglebutton</span></code> para quizzes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-com-togglebutton">3.3.3.1. Exemplo com <code class="docutils literal notranslate"><span class="pre">togglebutton</span></code>:</a></li>
 </ul>
 </li>
 </ul>
