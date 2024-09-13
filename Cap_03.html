@@ -395,10 +395,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacao-da-comparacao-entre-os-dois-metodos">3.2.3. Visualização da comparação entre os dois métodos</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">3.3. Análise e Comparação de Sistemas Eleitorais</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-1-maioria-simples">3.3.1. Quiz 1: Maioria Simples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-2-maioria-absoluta">3.3.2. Quiz 2: Maioria Absoluta</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-3-metodos-eleitorais">3.3.3. Quiz 3: Métodos Eleitorais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">3.3. Análise e Comparação de Sistemas Eleitorais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questoes">3.4. Questões</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maioria-simples">3.4.1. Maioria Simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maioria-absoluta">3.4.2. Maioria Absoluta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-eleitorais">3.4.3. Métodos Eleitorais</a></li>
 </ul>
 </li>
 </ul>
@@ -762,8 +763,8 @@ Explorar como os resultados mudam ao variar o número de candidatos ou eleitores
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resultados das simulações (10000 simulações, 1000 eleitores, 5 candidatos):
 
 Maioria_simples:
-  Vencedor mais frequente: Candidato 2
-  Frequência do vencedor: 20.44%
+  Vencedor mais frequente: Candidato 5
+  Frequência do vencedor: 20.66%
 
 Maioria_absoluta:
   Vencedor mais frequente: Não determinado
@@ -772,14 +773,17 @@ Maioria_absoluta:
 
 Borda:
   Vencedor mais frequente: Candidato 2
-  Frequência do vencedor: 21.44%
+  Frequência do vencedor: 20.39%
 </pre></div>
 </div>
-<img alt="_images/2c9d7db7949f8a97ef97d13155b220dd0e092a700558f20d39544f483e502ba9.png" src="_images/2c9d7db7949f8a97ef97d13155b220dd0e092a700558f20d39544f483e502ba9.png" />
+<img alt="_images/06e908d2d23d5cc9d93b0dcd5c12c3ac05c293f283a316c66991e0fed276bdf2.png" src="_images/06e908d2d23d5cc9d93b0dcd5c12c3ac05c293f283a316c66991e0fed276bdf2.png" />
 </div>
 </div>
-<section id="quiz-1-maioria-simples">
-<h3><span class="section-number">3.3.1. </span>Quiz 1: Maioria Simples<a class="headerlink" href="#quiz-1-maioria-simples" title="Link to this heading">#</a></h3>
+</section>
+<section id="questoes">
+<h2><span class="section-number">3.4. </span>Questões<a class="headerlink" href="#questoes" title="Link to this heading">#</a></h2>
+<section id="maioria-simples">
+<h3><span class="section-number">3.4.1. </span>Maioria Simples<a class="headerlink" href="#maioria-simples" title="Link to this heading">#</a></h3>
 <p>Numa eleição com três candidatos, os votos são distribuídos da seguinte forma:</p>
 <ul class="simple">
 <li><p>A: 45 votos</p></li>
@@ -797,8 +801,8 @@ Clique para ver a resposta<div class="sd-summary-down docutils">
 <p class="sd-card-text"><strong>Resposta correta: A</strong></p>
 </div>
 </details></section>
-<section id="quiz-2-maioria-absoluta">
-<h3><span class="section-number">3.3.2. </span>Quiz 2: Maioria Absoluta<a class="headerlink" href="#quiz-2-maioria-absoluta" title="Link to this heading">#</a></h3>
+<section id="maioria-absoluta">
+<h3><span class="section-number">3.4.2. </span>Maioria Absoluta<a class="headerlink" href="#maioria-absoluta" title="Link to this heading">#</a></h3>
 <p>Numa eleição com três candidatos, os votos são distribuídos da seguinte forma:</p>
 <ul class="simple">
 <li><p>A: 45 votos</p></li>
@@ -816,9 +820,15 @@ Clique para ver a resposta<div class="sd-summary-down docutils">
 <p class="sd-card-text"><strong>Resposta correta: NÃO</strong></p>
 </div>
 </details></section>
-<section id="quiz-3-metodos-eleitorais">
-<h3><span class="section-number">3.3.3. </span>Quiz 3: Métodos Eleitorais<a class="headerlink" href="#quiz-3-metodos-eleitorais" title="Link to this heading">#</a></h3>
-<p>Qual dos seguintes métodos eleitorais garante que o vencedor tenha mais de 50% dos votos?</p>
+<section id="metodos-eleitorais">
+<h3><span class="section-number">3.4.3. </span>Métodos Eleitorais<a class="headerlink" href="#metodos-eleitorais" title="Link to this heading">#</a></h3>
+<p>Qual dos seguintes métodos eleitorais:</p>
+<ul class="simple">
+<li><p>Maioria Simples</p></li>
+<li><p>Maioria Absoluta</p></li>
+<li><p>Voto Aleatório</p></li>
+</ul>
+<p>garante que o vencedor tenha mais de 50% dos votos?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Clique para ver a resposta<div class="sd-summary-down docutils">
@@ -894,10 +904,11 @@ Clique para ver a resposta<div class="sd-summary-down docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacao-da-comparacao-entre-os-dois-metodos">3.2.3. Visualização da comparação entre os dois métodos</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">3.3. Análise e Comparação de Sistemas Eleitorais</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-1-maioria-simples">3.3.1. Quiz 1: Maioria Simples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-2-maioria-absoluta">3.3.2. Quiz 2: Maioria Absoluta</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-3-metodos-eleitorais">3.3.3. Quiz 3: Métodos Eleitorais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">3.3. Análise e Comparação de Sistemas Eleitorais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questoes">3.4. Questões</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maioria-simples">3.4.1. Maioria Simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maioria-absoluta">3.4.2. Maioria Absoluta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-eleitorais">3.4.3. Métodos Eleitorais</a></li>
 </ul>
 </li>
 </ul>
