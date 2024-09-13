@@ -6,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1. Introdução aos Modelos Matemáticos na Cidadania &#8212; Modelos Matemáticos para a Cidadania</title>
   
@@ -28,13 +28,15 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=1b810b96" />
+    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,10 +62,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Cap_01';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Modelos Matemáticos nas Eleições" href="Cap_02.html" />
+    <link rel="next" title="2. Modelos Matemáticos nas Eleições" href="Cap_02.html" />
     <link rel="prev" title="Introdução" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -176,10 +177,8 @@
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Introdução aos Modelos Matemáticos na Cidadania</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="Cap_02.html">3. Modelos Matemáticos nas Eleições</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_03.html">4. Modelos Matemáticos nas Partilhas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_04.html">5. Modelos Matemáticos em Finanças Pessoais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cap_02.html">2. Modelos Matemáticos nas Eleições</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cap_03.html">3. Modelos Matemáticos na Partilha</a></li>
 </ul>
 
     </div>
@@ -221,37 +220,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -423,31 +391,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. Introdução aos Modelos Matemáticos na Cidadania</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-sao-modelos-matematicos">1.1. O que são modelos matemáticos?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importancia-dos-modelos-matematicos-na-cidadania">1.2. Importância dos modelos matemáticos na cidadania</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etica-e-responsabilidade-no-uso-de-modelos-matematicos">1.3. Ética e responsabilidade no uso de modelos matemáticos</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-simulacao-de-modelos-de-decisao-em-politicas-publicas">1.3.1. Exemplo: Simulação de Modelos de Decisão em Políticas Públicas</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-dos-modelos-do-exemplo">1.4. Análise dos Modelos do exemplo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-simples-media">1.4.1. Modelo Simples (Média)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vantagens">1.4.1.1. Vantagens:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desvantagens">1.4.1.2. Desvantagens:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-dos-modelos-do-exemplo">2. Análise dos Modelos do exemplo</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-simples-media">2.1. Modelo Simples (Média)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vantagens">2.1.1. Vantagens:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desvantagens">2.1.2. Desvantagens:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-ponderado">1.4.2. Modelo Ponderado</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.4.2.1. Vantagens:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.4.2.2. Desvantagens:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-ponderado">2.2. Modelo Ponderado</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.2.1. Vantagens:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2.2. Desvantagens:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consideracoes-adicionais">2.3. Considerações Adicionais</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consideracoes-adicionais">1.4.3. Considerações Adicionais</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -470,10 +434,10 @@ document.write(`
 <ul class="simple">
 <li><p>Sistemas eleitorais e representação política</p></li>
 <li><p>Distribuição de recursos públicos</p></li>
-<li><p>Políticas econômicas e fiscais</p></li>
-<li><p>Planejamento urbano e ambiental</p></li>
+<li><p>Políticas económicas e fiscais</p></li>
+<li><p>Planeamento urbano e ambiental</p></li>
 </ul>
-<p>Compreender esses modelos é essencial para uma participação cidadã informada e ativa.</p>
+<p>Compreender esses modelos é essencial para uma participação informada e ativa.</p>
 </section>
 <section id="etica-e-responsabilidade-no-uso-de-modelos-matematicos">
 <h2><span class="section-number">1.3. </span>Ética e responsabilidade no uso de modelos matemáticos<a class="headerlink" href="#etica-e-responsabilidade-no-uso-de-modelos-matematicos" title="Link to this heading">#</a></h2>
@@ -486,7 +450,7 @@ document.write(`
 <section id="exemplo-simulacao-de-modelos-de-decisao-em-politicas-publicas">
 <h3><span class="section-number">1.3.1. </span>Exemplo: Simulação de Modelos de Decisão em Políticas Públicas<a class="headerlink" href="#exemplo-simulacao-de-modelos-de-decisao-em-politicas-publicas" title="Link to this heading">#</a></h3>
 <p>Contexto:
-Esta simulação modela um cenário em que uma cidade está decidindo sobre a implementação de projetos de desenvolvimento urbano ao longo do tempo. O valor simulado representa um índice de qualidade de vida da cidade, que flutua devido a diversos fatores económicos e sociais.</p>
+Esta simulação modela um cenário em que os responsáveia políticos de uma cidade pretendem decidir sobre a implementação de projetos de desenvolvimento urbano ao longo do tempo. O valor simulado representa um índice de qualidade de vida da cidade, que flutua devido a diversos fatores económicos e sociais.</p>
 <p>O que está sendo simulado:</p>
 <ol class="arabic simple">
 <li><p>Dados reais: Um índice de qualidade de vida da cidade ao longo de 100 períodos (pode ser interpretado como meses ou trimestres).</p></li>
@@ -543,7 +507,7 @@ Demonstrar como diferentes modelos matemáticos podem levar a diferentes decisõ
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">modelo_ponderado</span><span class="p">(</span><span class="n">dados</span><span class="p">):</span>
-    <span class="n">pesos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dados</span><span class="p">))</span>  <span class="c1"># Pesos lineares de 1 a 2</span>
+    <span class="n">pesos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dados</span><span class="p">))</span>  <span class="c1"># Pesos lineares de 1 a 5</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">pesos</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">gerar_dados_reais</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -573,7 +537,7 @@ Demonstrar como diferentes modelos matemáticos podem levar a diferentes decisõ
 
 <span class="c1"># Simular decisões com ambos os modelos</span>
 <span class="n">num_simulacoes</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">tamanho_amostra</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">tamanho_amostra</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">decisoes_simples</span><span class="p">,</span> <span class="n">previsoes_simples</span> <span class="o">=</span> <span class="n">simular_decisoes</span><span class="p">(</span><span class="n">dados_reais</span><span class="p">,</span> <span class="n">modelo_simples</span><span class="p">,</span> <span class="n">num_simulacoes</span><span class="p">,</span> <span class="n">tamanho_amostra</span><span class="p">)</span>
 <span class="n">decisoes_ponderadas</span><span class="p">,</span> <span class="n">previsoes_ponderados</span> <span class="o">=</span> <span class="n">simular_decisoes</span><span class="p">(</span><span class="n">dados_reais</span><span class="p">,</span> <span class="n">modelo_ponderado</span><span class="p">,</span> <span class="n">num_simulacoes</span><span class="p">,</span> <span class="n">tamanho_amostra</span><span class="p">)</span>
 
@@ -631,23 +595,23 @@ Demonstrar como diferentes modelos matemáticos podem levar a diferentes decisõ
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/6e330b9faba977b4bb2bfefd654d868b05d08f35f2a12ffc12b3a24ab27df241.png" src="_images/6e330b9faba977b4bb2bfefd654d868b05d08f35f2a12ffc12b3a24ab27df241.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Modelo Simples - Aprovações: 444, Rejeições: 556
-Modelo Ponderado - Aprovações: 432, Rejeições: 568
+<img alt="_images/39b6bea53c98b1711d58dd4d22bbedf9265eca9e518686bfd5918f62e13a234e.png" src="_images/39b6bea53c98b1711d58dd4d22bbedf9265eca9e518686bfd5918f62e13a234e.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Modelo Simples - Aprovações: 430, Rejeições: 570
+Modelo Ponderado - Aprovações: 320, Rejeições: 680
 
 Este exemplo demonstra como diferentes modelos podem levar a diferentes decisões, mesmo quando aplicados aos mesmos dados.
 O modelo simples considera igualmente todos os dados da amostra, enquanto o modelo ponderado dá mais importância aos dados recentes.
 Observe como isso afeta as decisões de aprovação e rejeição, especialmente considerando a natureza cíclica dos dados.
 
-Diferença nas aprovações entre os modelos: 12
-Percentual de decisões diferentes: 1.20%
+Diferença nas aprovações entre os modelos: 110
+Percentual de decisões diferentes: 11.00%
 
 Períodos com maiores divergências entre os modelos:
-Período 111: Divergência de 1.42
-Período 281: Divergência de 1.42
-Período 451: Divergência de 1.42
-Período 621: Divergência de 1.42
-Período 791: Divergência de 1.42
+Período 50: Divergência de 4.70
+Período 150: Divergência de 4.70
+Período 250: Divergência de 4.70
+Período 350: Divergência de 4.70
+Período 450: Divergência de 4.70
 Observe como isso afeta as decisões de aprovação e rejeição, especialmente considerando a natureza cíclica dos dados.
 </pre></div>
 </div>
@@ -655,23 +619,22 @@ Observe como isso afeta as decisões de aprovação e rejeição, especialmente 
 </div>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="analise-dos-modelos-do-exemplo">
-<h1><span class="section-number">2. </span>Análise dos Modelos do exemplo<a class="headerlink" href="#analise-dos-modelos-do-exemplo" title="Link to this heading">#</a></h1>
+<section id="analise-dos-modelos-do-exemplo">
+<h2><span class="section-number">1.4. </span>Análise dos Modelos do exemplo<a class="headerlink" href="#analise-dos-modelos-do-exemplo" title="Link to this heading">#</a></h2>
 <section id="modelo-simples-media">
-<h2><span class="section-number">2.1. </span>Modelo Simples (Média)<a class="headerlink" href="#modelo-simples-media" title="Link to this heading">#</a></h2>
+<h3><span class="section-number">1.4.1. </span>Modelo Simples (Média)<a class="headerlink" href="#modelo-simples-media" title="Link to this heading">#</a></h3>
 <p>Este modelo calcula a média simples do índice de qualidade de vida dos últimos 30 períodos.</p>
 <section id="vantagens">
-<h3><span class="section-number">2.1.1. </span>Vantagens:<a class="headerlink" href="#vantagens" title="Link to this heading">#</a></h3>
+<h4><span class="section-number">1.4.1.1. </span>Vantagens:<a class="headerlink" href="#vantagens" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p><strong>Estabilidade</strong>: Continua proporcionando decisões mais consistentes ao longo do tempo, menos sujeitas a flutuações de curto prazo.</p></li>
+<li><p><strong>Estabilidade</strong>: Proporciona decisões mais consistentes ao longo do tempo, menos sujeitas a flutuações de curto prazo.</p></li>
 <li><p><strong>Simplicidade</strong>: Mantém-se fácil de entender e explicar, favorecendo a transparência.</p></li>
 <li><p><strong>Visão equilibrada</strong>: Considera igualmente um período mais longo, potencialmente capturando tendências mais duradouras.</p></li>
 <li><p><strong>Resistência a outliers</strong>: Menos afetado por eventos extremos ou anomalias de curto prazo.</p></li>
 </ol>
 </section>
 <section id="desvantagens">
-<h3><span class="section-number">2.1.2. </span>Desvantagens:<a class="headerlink" href="#desvantagens" title="Link to this heading">#</a></h3>
+<h4><span class="section-number">1.4.1.2. </span>Desvantagens:<a class="headerlink" href="#desvantagens" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Menor reatividade</strong>: Pode ser lento para reagir a mudanças significativas recentes nas condições da cidade.</p></li>
 <li><p><strong>Possível atraso em tendências</strong>: Pode não captar rapidamente novas tendências emergentes.</p></li>
@@ -680,10 +643,10 @@ Observe como isso afeta as decisões de aprovação e rejeição, especialmente 
 </section>
 </section>
 <section id="modelo-ponderado">
-<h2><span class="section-number">2.2. </span>Modelo Ponderado<a class="headerlink" href="#modelo-ponderado" title="Link to this heading">#</a></h2>
+<h3><span class="section-number">1.4.2. </span>Modelo Ponderado<a class="headerlink" href="#modelo-ponderado" title="Link to this heading">#</a></h3>
 <p>Este modelo usa pesos linearmente crescentes para dar progressivamente mais importância aos dados mais recentes do índice de qualidade de vida.</p>
 <section id="id1">
-<h3><span class="section-number">2.2.1. </span>Vantagens:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h4><span class="section-number">1.4.2.1. </span>Vantagens:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Reatividade aumentada</strong>: Responde mais rapidamente a mudanças recentes nas condições da cidade.</p></li>
 <li><p><strong>Sensibilidade a tendências emergentes</strong>: Capta melhor as dinâmicas atuais e emergentes.</p></li>
@@ -692,7 +655,7 @@ Observe como isso afeta as decisões de aprovação e rejeição, especialmente 
 </ol>
 </section>
 <section id="id2">
-<h3><span class="section-number">2.2.2. </span>Desvantagens:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h4><span class="section-number">1.4.2.2. </span>Desvantagens:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Potencial instabilidade</strong>: Pode levar a decisões mais voláteis, mudando mais frequentemente com base em tendências recentes.</p></li>
 <li><p><strong>Possível exagero a curto prazo</strong>: Pode reagir excessivamente a flutuações temporárias.</p></li>
@@ -701,20 +664,20 @@ Observe como isso afeta as decisões de aprovação e rejeição, especialmente 
 </section>
 </section>
 <section id="consideracoes-adicionais">
-<h2><span class="section-number">2.3. </span>Considerações Adicionais<a class="headerlink" href="#consideracoes-adicionais" title="Link to this heading">#</a></h2>
+<h3><span class="section-number">1.4.3. </span>Considerações Adicionais<a class="headerlink" href="#consideracoes-adicionais" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p><strong>Sensibilidade ao limite de aprovação</strong>: Com o limite ajustado para 27, ambos os modelos são mais sensíveis a flutuações próximas a este valor.</p></li>
-<li><p><strong>Impacto dos ciclos</strong>: A natureza cíclica dos dados na simulação atualizada torna a diferença entre os modelos mais pronunciada em certos períodos.</p></li>
-<li><p><strong>Tamanho da amostra</strong>: O uso de uma amostra maior (30 períodos) permite que ambos os modelos tenham uma visão mais ampla, mas o modelo ponderado ainda mantém um foco maior nos dados recentes.</p></li>
 <li><p><strong>Contexto de aplicação</strong>:</p>
 <ul class="simple">
-<li><p>O modelo simples pode ser mais adequado para decisões que requerem estabilidade a longo prazo, como planejamento de infraestrutura.</p></li>
-<li><p>O modelo ponderado pode ser mais apropriado para políticas que precisam responder rapidamente a mudanças cíclicas ou tendências emergentes, como programas econômicos ou sociais.</p></li>
+<li><p>O modelo simples pode ser mais adequado para decisões que requerem estabilidade a longo prazo, como planeamento de infraestrutura.</p></li>
+<li><p>O modelo ponderado pode ser mais apropriado para políticas que precisam responder rapidamente a mudanças cíclicas ou tendências emergentes, como programas económicos ou sociais.</p></li>
 </ul>
 </li>
-<li><p><strong>Complementaridade</strong>: Idealmente, os tomadores de decisão considerariam ambos os modelos, usando-os de forma complementar para obter uma visão mais completa antes de tomar decisões importantes.</p></li>
 </ol>
-<p>Esta análise atualizada reflete melhor o comportamento dos modelos na simulação aprimorada, destacando como suas características distintas podem levar a diferentes padrões de decisão ao longo do tempo, especialmente em dados com padrões cíclicos complexos.</p>
+<p style="line-height: 2;">
+<ol class="arabic simple" start="2">
+<li><p><strong>Complementaridade</strong>: Idealmente, os decisores considerariam ambos os modelos, usando-os de forma complementar para obter uma visão mais completa antes de tomar decisões importantes.</p></li>
+</ol>
+</section>
 </section>
 </section>
 
@@ -722,8 +685,8 @@ Observe como isso afeta as decisões de aprovação e rejeição, especialmente 
     {
         requestKernel: true,
         binderOptions: {
-            repo: "pjocoelho/JupyterBook_10",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -762,7 +725,7 @@ Observe como isso afeta as decisões de aprovação e rejeição, especialmente 
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Modelos Matemáticos nas Eleições</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Modelos Matemáticos nas Eleições</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -782,31 +745,27 @@ Observe como isso afeta as decisões de aprovação e rejeição, especialmente 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. Introdução aos Modelos Matemáticos na Cidadania</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-sao-modelos-matematicos">1.1. O que são modelos matemáticos?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importancia-dos-modelos-matematicos-na-cidadania">1.2. Importância dos modelos matemáticos na cidadania</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etica-e-responsabilidade-no-uso-de-modelos-matematicos">1.3. Ética e responsabilidade no uso de modelos matemáticos</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-simulacao-de-modelos-de-decisao-em-politicas-publicas">1.3.1. Exemplo: Simulação de Modelos de Decisão em Políticas Públicas</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-dos-modelos-do-exemplo">1.4. Análise dos Modelos do exemplo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-simples-media">1.4.1. Modelo Simples (Média)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vantagens">1.4.1.1. Vantagens:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desvantagens">1.4.1.2. Desvantagens:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-dos-modelos-do-exemplo">2. Análise dos Modelos do exemplo</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-simples-media">2.1. Modelo Simples (Média)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vantagens">2.1.1. Vantagens:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desvantagens">2.1.2. Desvantagens:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-ponderado">1.4.2. Modelo Ponderado</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.4.2.1. Vantagens:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.4.2.2. Desvantagens:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-ponderado">2.2. Modelo Ponderado</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.2.1. Vantagens:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2.2. Desvantagens:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consideracoes-adicionais">2.3. Considerações Adicionais</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consideracoes-adicionais">1.4.3. Considerações Adicionais</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>

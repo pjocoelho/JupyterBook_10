@@ -6,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Introdução &#8212; Modelos Matemáticos para a Cidadania</title>
   
@@ -28,13 +28,15 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=1b810b96" />
+    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,7 +62,6 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="1. Introdução aos Modelos Matemáticos na Cidadania" href="Cap_01.html" />
@@ -177,10 +178,8 @@
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Cap_01.html">1. Introdução aos Modelos Matemáticos na Cidadania</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="Cap_02.html">3. Modelos Matemáticos nas Eleições</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_03.html">4. Modelos Matemáticos nas Partilhas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_04.html">5. Modelos Matemáticos em Finanças Pessoais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cap_02.html">2. Modelos Matemáticos nas Eleições</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cap_03.html">3. Modelos Matemáticos na Partilha</a></li>
 </ul>
 
     </div>
@@ -393,10 +392,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-usar-este-livro">Como usar este livro</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nota-para-executar-e-editar-os-blocos-de-codigo-no-livro"><em>NOTA</em> Para executar e editar os blocos de código no livro:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-usar-este-livro">Como usar este livro</a></li>
 </ul>
             </nav>
         </div>
@@ -416,29 +412,18 @@ document.write(`
 <h2>Como usar este livro<a class="headerlink" href="#como-usar-este-livro" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Leia as explicações teóricas para entender os conceitos.</p></li>
-<li><p>Execute os códigos Python para ver os modelos em ação.</p></li>
+<li><p>Execute os códigos Python no Colab (basta copiar o código no livro e colar no Colab)</p></li>
 <li><p>Experimente modificar os códigos e observar como os resultados mudam.</p></li>
 <li><p>Complete os exercícios propostos.</p></li>
-</ol>
-<section id="nota-para-executar-e-editar-os-blocos-de-codigo-no-livro">
-<h3><em>NOTA</em> Para executar e editar os blocos de código no livro:<a class="headerlink" href="#nota-para-executar-e-editar-os-blocos-de-codigo-no-livro" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Clique no botão “Launch Binder” no topo da página.</p></li>
-<li><p>Aguarde enquanto o ambiente é preparado (pode levar alguns minutos na primeira vez).</p></li>
-<li><p>Uma vez carregado, você verá uma interface JupyterLab onde pode editar e executar o código.</p></li>
-<li><p>Para executar uma célula de código, selecione-a e pressione Shift + Enter.</p></li>
 </ol>
 <p>Divirta-se explorando e experimentando com o código!</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Cap_01.html">1. Introdução aos Modelos Matemáticos na Cidadania</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_01.html#analise-dos-modelos-do-exemplo">2. Análise dos Modelos do exemplo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_02.html">3. Modelos Matemáticos nas Eleições</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_03.html">4. Modelos Matemáticos nas Partilhas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cap_04.html">5. Modelos Matemáticos em Finanças Pessoais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cap_02.html">2. Modelos Matemáticos nas Eleições</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cap_03.html">3. Modelos Matemáticos na Partilha</a></li>
 </ul>
 </div>
-</section>
 </section>
 </section>
 
@@ -446,8 +431,8 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "pjocoelho/JupyterBook_10",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -497,10 +482,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-usar-este-livro">Como usar este livro</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nota-para-executar-e-editar-os-blocos-de-codigo-no-livro"><em>NOTA</em> Para executar e editar os blocos de código no livro:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-usar-este-livro">Como usar este livro</a></li>
 </ul>
   </nav></div>
 

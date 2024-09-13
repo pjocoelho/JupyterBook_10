@@ -9,8 +9,13 @@ execute:
   execute_notebooks: force
   timeout: 100
   allow_errors: false
+  
+# Configurações do Jupyter
+jupyter:
+  jupyter_widgets:
+    enabled: true
 
-# Configurações LaTeX (se necessário)
+# Configurações LaTeX
 latex:
   latex_engine: pdflatex
 
@@ -22,6 +27,10 @@ repository:
 
 # Opções específicas HTML
 html:
+  extra_css: 
+    - _static/custom.css
+  theme:
+    name: "sphinx_book_theme"
   use_issues_button: true
   use_repository_button: true
   use_edit_page_button: true
@@ -39,8 +48,8 @@ html:
 launch_buttons:
   notebook_interface: jupyterlab
   binderhub_url: "https://mybinder.org"
-  thebe: true
-  use_jupyter_lab: true
+  colab_url: "https://colab.research.google.com"
+  thebe: false
 
 # Configurações de análise e renderização
 parse:
@@ -55,32 +64,41 @@ parse:
     - replacements
     - smartquotes
     - substitution
+    - tasklist
 
 # Configurações do Sphinx
 sphinx:
   config:
     html_js_files:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
-      - https://unpkg.com/thebe@latest/lib/index.js
     html_theme_options:
       use_download_button: true
       repository_url: https://github.com/pjocoelho/JupyterBook_10
       use_issues_button: true
       use_repository_button: true
       use_edit_page_button: true
-      use_thebe: true
       launch_buttons:
-        thebe: true
+        thebe: false
         notebook_interface: "jupyterlab"
-    thebe_config:
-      repository_url: https://github.com/pjocoelho/JupyterBook_10
-      repository_branch: main
-      kernel_name: python3
-      debug: false
-      requestKernel: true
-      mount_activate_widget: true
+    #nb_custom_formats:
+      #.md: jupyterbook.myst_nb.nb_myst.NotebookParser
+    myst_enable_extensions:
+      - amsmath
+      - colon_fence
+      - deflist
+      - dollarmath
+      - html_admonition
+      - html_image
+      - linkify
+      - replacements
+      - smartquotes
+      - substitution
+      - tasklist
+    myst_dmath_double_inline: true
   extra_extensions:
-    - sphinx_thebe
+    - sphinx_togglebutton
+    - sphinx_copybutton
+    #- jupyterquiz
 
 # Configurações de numeração de figuras e tabelas
 numfig: true
