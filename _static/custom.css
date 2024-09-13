@@ -1,0 +1,6 @@
+.blue-background-red-text {
+    background-color: #e6f3ff;  /* Um tom claro de azul */
+    color: #FF0000;             /* Vermelho */
+    padding: 15px;
+    border-radius: 5px;
+}
