@@ -557,7 +557,52 @@ Partido D: 1 lugares
 </div>
 </div>
 </div>
-</section>
+<div class="blue-background-dark-blue-text">
+<div id="quiz-container" style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+    <h2>Exercício</h2>
+    <div id="question" style="margin-bottom: 20px;">
+        Um parlamento tem 8 assentos para distribuir. Os votos foram:<br>
+        - Partido P: 100,000 votos<br>
+        - Partido Q: 80,000 votos<br>
+        - Partido R: 40,000 votos<br>
+        - Partido S: 20,000 votos<br>
+        Quantos assentos o Partido Q recebe pelo método de Hondt?
+    </div>
+    <input type="number" id="answer-input" min="0" max="8" style="width: 50px; margin-right: 10px;">
+    <button id="submit-btn" style="padding: 5px 10px; margin-right: 10px;">Verificar</button>
+    <button id="next-btn" style="padding: 5px 10px; margin-right: 10px; display: none;">Próxima Pergunta</button>
+    <div id="feedback" style="margin-top: 20px; font-weight: bold;"></div>
+</div>
+<script>
+(function() {
+    const submitBtn = document.getElementById('submit-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const answerInput = document.getElementById('answer-input');
+    const feedback = document.getElementById('feedback');
+
+    submitBtn.addEventListener('click', checkAnswer);
+    nextBtn.addEventListener('click', nextQuestion);
+
+    function checkAnswer() {
+        const userAnswer = parseInt(answerInput.value);
+        if (userAnswer === 3) {
+            feedback.textContent = "Correto! O Partido Q recebe 3 assentos pelo método de Hondt.";
+            feedback.style.color = 'green';
+        } else {
+            feedback.textContent = "Incorreto. Tente calcular novamente usando o método de Hondt.";
+            feedback.style.color = 'red';
+        }
+        submitBtn.style.display = 'none';
+        nextBtn.style.display = 'inline-block';
+    }
+
+    function nextQuestion() {
+        feedback.textContent = "Este é o final do quiz. Não há mais perguntas disponíveis.";
+        nextBtn.style.display = 'none';
+    }
+})();
+</script>
+</div></section>
 </section>
 </section>
 
