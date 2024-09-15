@@ -395,10 +395,8 @@ document.write(`
 <li><p>Atribuição dos mandatos aos partidos com os maiores quocientes, até que todos os lugares sejam preenchidos.</p></li>
 </ol>
 <p><strong>EXEMPLO</strong></p>
-<figure>
-  <img src="tabela_hondt.png" alt="Tabela de atribuição de mandatos" style="max-width: 100%; height: auto;">
-  <figcaption style="text-align: center;">Atribuição de 8 mandatos por 3 partidos pelo método D'Hondt</figcaption>
-</figure>
+<p><img alt="Tabela de atribuição de mandatos" src="_images/tabela_hondt.png" />{width=“80%”}</p>
+<p><em>Atribuição de 8 mandatos por 3 partidos pelo método D’Hondt</em></p>
 <p>A tabela mostra a distribuição de 8 mandatos entre 3 partidos (A, B e C) usando o método D’Hondt.
 Partido A: 10.000 votos
 Partido B: 6.000 votos
@@ -773,54 +771,57 @@ Partido D: 1 mandatos
         <div id="attempts" style="margin-top: 10px;">Tentativas restantes: <span id="attempts-count">2</span></div>
     </div>
     <script>
-        const submitBtn = document.getElementById('submit-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const answerInput = document.getElementById('answer-input');
-        const feedback = document.getElementById('feedback');
-        const attemptsCount = document.getElementById('attempts-count');
-        let attempts = 2;
-        const correctAnswer = 3;
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    submitBtn.addEventListener(&#39;click&#39;, checkAnswer);
-    nextBtn.addEventListener(&#39;click&#39;, nextQuestion);
+        document.addEventListener('DOMContentLoaded', function() {
+            const submitBtn = document.getElementById('submit-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const answerInput = document.getElementById('answer-input');
+            const feedback = document.getElementById('feedback');
+            const attemptsCount = document.getElementById('attempts-count');
+            let attempts = 2;
+            const correctAnswer = 3;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        submitBtn.addEventListener(&#39;click&#39;, checkAnswer);
+        nextBtn.addEventListener(&#39;click&#39;, nextQuestion);
 
-    function checkAnswer() {
-        const userAnswer = parseInt(answerInput.value);
-        
-        if (isNaN(userAnswer)) {
-            feedback.textContent = &quot;Por favor, insira um número válido.&quot;;
-            feedback.style.color = &#39;red&#39;;
-            return;
-        }
-
-        attempts--;
-        attemptsCount.textContent = attempts;
-
-        if (userAnswer === correctAnswer) {
-            feedback.textContent = &quot;Correto! O Partido Q recebe 3 assentos pelo método de D&#39;Hondt.&quot;;
-            feedback.style.color = &#39;green&#39;;
-            endQuiz();
-        } else {
-            if (attempts &gt; 0) {
-                feedback.textContent = &quot;Incorreto. Tente calcular novamente usando o método de D&#39;Hondt.&quot;;
+        function checkAnswer() {
+            console.log(&#39;checkAnswer function called&#39;); // Debug log
+            const userAnswer = parseInt(answerInput.value);
+            
+            if (isNaN(userAnswer)) {
+                feedback.textContent = &quot;Por favor, insira um número válido.&quot;;
                 feedback.style.color = &#39;red&#39;;
-            } else {
-                feedback.textContent = `Incorreto. A resposta correta é ${correctAnswer}. O Partido Q recebe ${correctAnswer} assentos pelo método de D&#39;Hondt.`;
-                feedback.style.color = &#39;red&#39;;
+                return;
+            }
+
+            attempts--;
+            attemptsCount.textContent = attempts;
+
+            if (userAnswer === correctAnswer) {
+                feedback.textContent = &quot;Correto! O Partido Q recebe 3 assentos pelo método de D&#39;Hondt.&quot;;
+                feedback.style.color = &#39;green&#39;;
                 endQuiz();
+            } else {
+                if (attempts &gt; 0) {
+                    feedback.textContent = &quot;Incorreto. Tente calcular novamente usando o método de D&#39;Hondt.&quot;;
+                    feedback.style.color = &#39;red&#39;;
+                } else {
+                    feedback.textContent = `Incorreto. A resposta correta é ${correctAnswer}. O Partido Q recebe ${correctAnswer} assentos pelo método de D&#39;Hondt.`;
+                    feedback.style.color = &#39;red&#39;;
+                    endQuiz();
+                }
             }
         }
-    }
 
-    function endQuiz() {
-        submitBtn.style.display = &#39;none&#39;;
-        nextBtn.style.display = &#39;inline-block&#39;;
-        answerInput.disabled = true;
-    }
+        function endQuiz() {
+            submitBtn.style.display = &#39;none&#39;;
+            nextBtn.style.display = &#39;inline-block&#39;;
+            answerInput.disabled = true;
+        }
 
-    function nextQuestion() {
-        feedback.textContent = &quot;Não há mais perguntas.&quot;;
-        nextBtn.style.display = &#39;none&#39;;
-    }
+        function nextQuestion() {
+            feedback.textContent = &quot;Não há mais perguntas.&quot;;
+            nextBtn.style.display = &#39;none&#39;;
+        }
+    });
 &lt;/script&gt;
 </pre></div>
 </div>
