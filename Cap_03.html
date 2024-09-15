@@ -712,12 +712,12 @@ Esta diferença faz com que o método Sainte-Laguë tenda a favorecer ligeiramen
 <div id="quiz-container">
     <h4>Exercício</h4>
     <div id="question">
-        Um parlamento tem 8 assentos para distribuir. Os votos foram:<br>
+        Um parlamento tem 8 lugares para distribuir. Os votos foram:<br>
         - Partido P: 100,000 votos<br>
         - Partido Q: 80,000 votos<br>
         - Partido R: 40,000 votos<br>
         - Partido S: 20,000 votos<br>
-        Quantos assentos o Partido Q recebe pelo método de D'Hondt?
+        Quantos lugares recebe o Partido Q pelo método de D'Hondt?
     </div>
     <input type="number" id="answer-input" min="0" max="8">
     <button onclick="checkAnswer()">Verificar</button>
@@ -743,7 +743,7 @@ function checkAnswer() {
     attemptsCount.textContent = attempts;
 
     if (userAnswer === correctAnswer) {
-        feedback.textContent = "Correto! O Partido Q recebe 3 assentos pelo método de D'Hondt.";
+        feedback.textContent = "Correto! O Partido Q recebe 3 lugares pelo método de D'Hondt.";
         feedback.style.color = 'green';
         endQuiz();
     } else {
@@ -751,7 +751,7 @@ function checkAnswer() {
             feedback.textContent = "Incorreto. Tente calcular novamente usando o método de D'Hondt.";
             feedback.style.color = 'red';
         } else {
-            feedback.textContent = `Incorreto. A resposta correta é ${correctAnswer}. O Partido Q recebe ${correctAnswer} assentos pelo método de D'Hondt.`;
+            feedback.textContent = `Incorreto. A resposta correta é ${correctAnswer}. O Partido Q recebe ${correctAnswer} lugaress pelo método de D'Hondt.`;
             feedback.style.color = 'red';
             endQuiz();
         }
