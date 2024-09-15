@@ -377,7 +377,19 @@ document.write(`
 <section id="metodo-de-hondt">
 <h3><span class="section-number">3.2.1. </span>Método de Hondt<a class="headerlink" href="#metodo-de-hondt" title="Link to this heading">#</a></h3>
 <p>O método de Hondt é um sistema de representação proporcional usado para atribuir mandatos em assembleias legislativas.</p>
+</section>
+<section id="metodo-de-sainte-lague">
+<h3><span class="section-number">3.2.2. </span>Método de Sainte-Laguë<a class="headerlink" href="#metodo-de-sainte-lague" title="Link to this heading">#</a></h3>
+<p>O método de Sainte-Laguë é outra forma de distribuição proporcional de mandatos, que tende a favorecer partidos menores em comparação com o método de Hondt.</p>
 <p><strong>Exemplo</strong></p>
+<p>Numa eleição legislativa, quatro partidos políticos concorreram para preencher 10 mandatos na assembleia. Os resultados da votação foram os seguintes:</p>
+<p>Partido A: 100.000 votos
+Partido B: 80.000 votos
+Partido C: 30.000 votos
+Partido D: 20.000 votos</p>
+<p>Total de votos: 230.000
+Número de mandatos a serem distribuídos: 10</p>
+<p>Tarefa: Utilize os métodos de Hondt e Sainte-Laguë para distribuir os mandatos entre os partidos com base nestes resultados eleitorais. Compare os resultados obtidos por cada método.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -385,11 +397,11 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_hondt</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_hondt</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">):</span>
     <span class="n">partidos</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">votos</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
     <span class="n">distribuicao</span> <span class="o">=</span> <span class="p">{</span><span class="n">partido</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">}</span>
     
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lugares</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mandatos</span><span class="p">):</span>
         <span class="n">quocientes</span> <span class="o">=</span> <span class="p">{</span><span class="n">partido</span><span class="p">:</span> <span class="n">votos</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">distribuicao</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">}</span>
         <span class="n">vencedor</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">quocientes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">quocientes</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
         <span class="n">distribuicao</span><span class="p">[</span><span class="n">vencedor</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -397,30 +409,25 @@ document.write(`
     <span class="k">return</span> <span class="n">distribuicao</span>
 
 <span class="n">votos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Partido A&#39;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;Partido B&#39;</span><span class="p">:</span> <span class="mi">80000</span><span class="p">,</span> <span class="s1">&#39;Partido C&#39;</span><span class="p">:</span> <span class="mi">30000</span><span class="p">,</span> <span class="s1">&#39;Partido D&#39;</span><span class="p">:</span> <span class="mi">20000</span><span class="p">}</span>
-<span class="n">lugares</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">resultado</span> <span class="o">=</span> <span class="n">metodo_hondt</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distribuição de lugares pelo método de Hondt:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">partido</span><span class="p">,</span> <span class="n">num_lugares</span> <span class="ow">in</span> <span class="n">resultado</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">partido</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">num_lugares</span><span class="si">}</span><span class="s2"> lugares&quot;</span><span class="p">)</span>
+<span class="n">mandatos</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">metodo_hondt</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distribuição de mandatos pelo método de Hondt:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">partido</span><span class="p">,</span> <span class="n">num_mandatos</span> <span class="ow">in</span> <span class="n">resultado</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">partido</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">num_mandatos</span><span class="si">}</span><span class="s2"> mandatos&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distribuição de lugares pelo método de Hondt:
-Partido A: 5 lugares
-Partido B: 4 lugares
-Partido C: 1 lugares
-Partido D: 0 lugares
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distribuição de mandatos pelo método de Hondt:
+Partido A: 5 mandatos
+Partido B: 4 mandatos
+Partido C: 1 mandatos
+Partido D: 0 mandatos
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="metodo-de-sainte-lague">
-<h3><span class="section-number">3.2.2. </span>Método de Sainte-Laguë<a class="headerlink" href="#metodo-de-sainte-lague" title="Link to this heading">#</a></h3>
-<p>O método de Sainte-Laguë é outra forma de distribuição proporcional de assentos, que tende a favorecer partidos menores em comparação com o método de Hondt.</p>
-<p><strong>Exemplo</strong></p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -428,11 +435,11 @@ Partido D: 0 lugares
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_sainte_lague</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_sainte_lague</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">):</span>
     <span class="n">partidos</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">votos</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
     <span class="n">distribuicao</span> <span class="o">=</span> <span class="p">{</span><span class="n">partido</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">}</span>
     
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lugares</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mandatos</span><span class="p">):</span>
         <span class="n">quocientes</span> <span class="o">=</span> <span class="p">{</span><span class="n">partido</span><span class="p">:</span> <span class="n">votos</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">distribuicao</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">}</span>
         <span class="n">vencedor</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">quocientes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">quocientes</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
         <span class="n">distribuicao</span><span class="p">[</span><span class="n">vencedor</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -442,21 +449,21 @@ Partido D: 0 lugares
 <span class="c1"># Exemplo</span>
 
 <span class="n">votos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Partido A&#39;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;Partido B&#39;</span><span class="p">:</span> <span class="mi">80000</span><span class="p">,</span> <span class="s1">&#39;Partido C&#39;</span><span class="p">:</span> <span class="mi">30000</span><span class="p">,</span> <span class="s1">&#39;Partido D&#39;</span><span class="p">:</span> <span class="mi">20000</span><span class="p">}</span>
-<span class="n">lugares</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">resultado</span> <span class="o">=</span> <span class="n">metodo_sainte_lague</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Distribuição de lugares pelo método de Sainte-Laguë:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">partido</span><span class="p">,</span> <span class="n">num_lugares</span> <span class="ow">in</span> <span class="n">resultado</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">partido</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">num_lugares</span><span class="si">}</span><span class="s2"> lugares&quot;</span><span class="p">)</span>
+<span class="n">mandatos</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">metodo_sainte_lague</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Distribuição de mandatos pelo método de Sainte-Laguë:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">partido</span><span class="p">,</span> <span class="n">num_mandatos</span> <span class="ow">in</span> <span class="n">resultado</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">partido</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">num_mandatos</span><span class="si">}</span><span class="s2"> mandatos&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distribuição de lugares pelo método de Sainte-Laguë:
-Partido A: 4 lugares
-Partido B: 4 lugares
-Partido C: 1 lugares
-Partido D: 1 lugares
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distribuição de mandatos pelo método de Sainte-Laguë:
+Partido A: 4 mandatos
+Partido B: 4 mandatos
+Partido C: 1 mandatos
+Partido D: 1 mandatos
 </pre></div>
 </div>
 </div>
@@ -473,86 +480,82 @@ Partido D: 1 lugares
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="k">def</span> <span class="nf">metodo_hondt</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">metodo_hondt</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">):</span>
     <span class="n">partidos</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">votos</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
     <span class="n">distribuicao</span> <span class="o">=</span> <span class="p">{</span><span class="n">partido</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">}</span>
     
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lugares</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mandatos</span><span class="p">):</span>
         <span class="n">quocientes</span> <span class="o">=</span> <span class="p">{</span><span class="n">partido</span><span class="p">:</span> <span class="n">votos</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">distribuicao</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">}</span>
         <span class="n">vencedor</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">quocientes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">quocientes</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
         <span class="n">distribuicao</span><span class="p">[</span><span class="n">vencedor</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="n">distribuicao</span>
 
-<span class="k">def</span> <span class="nf">metodo_sainte_lague</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">metodo_sainte_lague</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">):</span>
     <span class="n">partidos</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">votos</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
     <span class="n">distribuicao</span> <span class="o">=</span> <span class="p">{</span><span class="n">partido</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">}</span>
     
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lugares</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mandatos</span><span class="p">):</span>
         <span class="n">quocientes</span> <span class="o">=</span> <span class="p">{</span><span class="n">partido</span><span class="p">:</span> <span class="n">votos</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">distribuicao</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">}</span>
         <span class="n">vencedor</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">quocientes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">quocientes</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
         <span class="n">distribuicao</span><span class="p">[</span><span class="n">vencedor</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="n">distribuicao</span>
 
-<span class="k">def</span> <span class="nf">comparar_metodos</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">):</span>
-    <span class="n">resultado_hondt</span> <span class="o">=</span> <span class="n">metodo_hondt</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">)</span>
-    <span class="n">resultado_sainte_lague</span> <span class="o">=</span> <span class="n">metodo_sainte_lague</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">)</span>
-
+<span class="k">def</span> <span class="nf">comparar_metodos</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">):</span>
+    <span class="n">resultado_hondt</span> <span class="o">=</span> <span class="n">metodo_hondt</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">)</span>
+    <span class="n">resultado_sainte_lague</span> <span class="o">=</span> <span class="n">metodo_sainte_lague</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">)</span>
     <span class="n">partidos</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">votos</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
     <span class="n">lugares_hondt</span> <span class="o">=</span> <span class="p">[</span><span class="n">resultado_hondt</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">]</span>
     <span class="n">lugares_sainte_lague</span> <span class="o">=</span> <span class="p">[</span><span class="n">resultado_sainte_lague</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">partidos</span><span class="p">]</span>
-
+    
     <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">partidos</span><span class="p">))</span>
     <span class="n">width</span> <span class="o">=</span> <span class="mf">0.35</span>
-
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
     <span class="n">rects1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="n">i</span> <span class="o">-</span> <span class="n">width</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">],</span> <span class="n">lugares_hondt</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Método de Hondt&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
     <span class="n">rects2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="n">i</span> <span class="o">+</span> <span class="n">width</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">],</span> <span class="n">lugares_sainte_lague</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Método de Sainte-Laguë&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Número de Lugares&#39;</span><span class="p">)</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Número de Mandatos&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Comparação entre os métodos de Hondt e Sainte-Laguë&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">partidos</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-
+    
     <span class="n">ax</span><span class="o">.</span><span class="n">bar_label</span><span class="p">(</span><span class="n">rects1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">bar_label</span><span class="p">(</span><span class="n">rects2</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-
+    
     <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distribuição de lugares pelo método de Hondt:&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">partido</span><span class="p">,</span> <span class="n">num_lugares</span> <span class="ow">in</span> <span class="n">resultado_hondt</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">partido</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">num_lugares</span><span class="si">}</span><span class="s2"> lugares&quot;</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Distribuição de lugares pelo método de Sainte-Laguë:&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">partido</span><span class="p">,</span> <span class="n">num_lugares</span> <span class="ow">in</span> <span class="n">resultado_sainte_lague</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">partido</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">num_lugares</span><span class="si">}</span><span class="s2"> lugares&quot;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distribuição de mandatos pelo método de Hondt:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">partido</span><span class="p">,</span> <span class="n">num_mandatos</span> <span class="ow">in</span> <span class="n">resultado_hondt</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">partido</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">num_mandatos</span><span class="si">}</span><span class="s2"> mandatos&quot;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Distribuição de mandatos pelo método de Sainte-Laguë:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">partido</span><span class="p">,</span> <span class="n">num_mandatos</span> <span class="ow">in</span> <span class="n">resultado_sainte_lague</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">partido</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">num_mandatos</span><span class="si">}</span><span class="s2"> mandatos&quot;</span><span class="p">)</span>
 
 <span class="c1"># Exemplo de uso</span>
-
 <span class="n">votos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Partido A&#39;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;Partido B&#39;</span><span class="p">:</span> <span class="mi">80000</span><span class="p">,</span> <span class="s1">&#39;Partido C&#39;</span><span class="p">:</span> <span class="mi">30000</span><span class="p">,</span> <span class="s1">&#39;Partido D&#39;</span><span class="p">:</span> <span class="mi">20000</span><span class="p">}</span>
-<span class="n">lugares</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">comparar_metodos</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">lugares</span><span class="p">)</span>
+<span class="n">mandatos</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">comparar_metodos</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">mandatos</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/56e22ccf6f73a6bc1364f33a9a9e855b3f37c1e63168c915dfb8f1e0850e2fa3.png" src="_images/56e22ccf6f73a6bc1364f33a9a9e855b3f37c1e63168c915dfb8f1e0850e2fa3.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distribuição de lugares pelo método de Hondt:
-Partido A: 5 lugares
-Partido B: 4 lugares
-Partido C: 1 lugares
-Partido D: 0 lugares
+<img alt="_images/457ee9a55c33beb53ecfb585d75a5310eb8e185df010dbfbe6335223d9771127.png" src="_images/457ee9a55c33beb53ecfb585d75a5310eb8e185df010dbfbe6335223d9771127.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distribuição de mandatos pelo método de Hondt:
+Partido A: 5 mandatos
+Partido B: 4 mandatos
+Partido C: 1 mandatos
+Partido D: 0 mandatos
 
-Distribuição de lugares pelo método de Sainte-Laguë:
-Partido A: 4 lugares
-Partido B: 4 lugares
-Partido C: 1 lugares
-Partido D: 1 lugares
+Distribuição de mandatos pelo método de Sainte-Laguë:
+Partido A: 4 mandatos
+Partido B: 4 mandatos
+Partido C: 1 mandatos
+Partido D: 1 mandatos
 </pre></div>
 </div>
 </div>
@@ -597,7 +600,7 @@ Partido D: 1 lugares
     }
 
     function nextQuestion() {
-        feedback.textContent = "Este é o final do quiz. Não há mais perguntas disponíveis.";
+        feedback.textContent = "Não há mais tentativas disponíveis.";
         nextBtn.style.display = 'none';
     }
 })();
