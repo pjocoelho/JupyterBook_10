@@ -180,6 +180,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Cap_01.html">1. Introdução aos Modelos Matemáticos na Cidadania</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cap_02.html">2. Modelos Matemáticos nas Eleições</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Modelos Matemáticos na Partilha</a></li>
+
 </ul>
 
     </div>
@@ -328,6 +329,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Modelos Matemáticos na Partilha</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-partilha-proporcional">3.1. Métodos de partilha proporcional</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-distribuicao-de-mandatos">3.2. Sistemas de distribuição de mandatos</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-hondt">3.2.1. Método de Hondt</a><ul class="nav section-nav flex-column">
@@ -342,6 +344,10 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicio-aqui">4. EXERCÍCIO AQUI</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -699,134 +705,12 @@ Partido D: 1 mandatos
 </div>
 </div>
 </div>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício sobre o Método de D'Hondt</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f8ff;
-        }
-        #quiz-container {
-            background-color: #ffffff;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #00008b;
-        }
-        #question {
-            margin-bottom: 20px;
-        }
-        input[type="number"] {
-            width: 50px;
-            margin-right: 10px;
-            padding: 5px;
-        }
-        button {
-            padding: 5px 10px;
-            margin-right: 10px;
-            background-color: #4169e1;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #1e90ff;
-        }
-        #feedback {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div id="quiz-container">
-        <h2>Exercício</h2>
-        <div id="question">
-            Um parlamento tem 8 assentos para distribuir. Os votos foram:<br>
-            - Partido P: 100,000 votos<br>
-            - Partido Q: 80,000 votos<br>
-            - Partido R: 40,000 votos<br>
-            - Partido S: 20,000 votos<br>
-            Quantos assentos o Partido Q recebe pelo método de D'Hondt?
-        </div>
-        <input type="number" id="answer-input" min="0" max="8">
-        <button id="submit-btn">Verificar</button>
-        <button id="next-btn" style="display: none;">Próxima Pergunta</button>
-        <div id="feedback"></div>
-        <div id="attempts" style="margin-top: 10px;">Tentativas restantes: <span id="attempts-count">2</span></div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const submitBtn = document.getElementById('submit-btn');
-            const nextBtn = document.getElementById('next-btn');
-            const answerInput = document.getElementById('answer-input');
-            const feedback = document.getElementById('feedback');
-            const attemptsCount = document.getElementById('attempts-count');
-            let attempts = 2;
-            const correctAnswer = 3;
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        submitBtn.addEventListener(&#39;click&#39;, checkAnswer);
-        nextBtn.addEventListener(&#39;click&#39;, nextQuestion);
-
-        function checkAnswer() {
-            console.log(&#39;checkAnswer function called&#39;); // Debug log
-            const userAnswer = parseInt(answerInput.value);
-            
-            if (isNaN(userAnswer)) {
-                feedback.textContent = &quot;Por favor, insira um número válido.&quot;;
-                feedback.style.color = &#39;red&#39;;
-                return;
-            }
-
-            attempts--;
-            attemptsCount.textContent = attempts;
-
-            if (userAnswer === correctAnswer) {
-                feedback.textContent = &quot;Correto! O Partido Q recebe 3 assentos pelo método de D&#39;Hondt.&quot;;
-                feedback.style.color = &#39;green&#39;;
-                endQuiz();
-            } else {
-                if (attempts &gt; 0) {
-                    feedback.textContent = &quot;Incorreto. Tente calcular novamente usando o método de D&#39;Hondt.&quot;;
-                    feedback.style.color = &#39;red&#39;;
-                } else {
-                    feedback.textContent = `Incorreto. A resposta correta é ${correctAnswer}. O Partido Q recebe ${correctAnswer} assentos pelo método de D&#39;Hondt.`;
-                    feedback.style.color = &#39;red&#39;;
-                    endQuiz();
-                }
-            }
-        }
-
-        function endQuiz() {
-            submitBtn.style.display = &#39;none&#39;;
-            nextBtn.style.display = &#39;inline-block&#39;;
-            answerInput.disabled = true;
-        }
-
-        function nextQuestion() {
-            feedback.textContent = &quot;Não há mais perguntas.&quot;;
-            nextBtn.style.display = &#39;none&#39;;
-        }
-    });
-&lt;/script&gt;
-</pre></div>
-</div>
-</body>
-</html><p>A diferença entre os métodos de Sainte-Laguë e D’Hondt pode ser explicada matematicamente através das fórmulas que cada método utiliza para distribuir os mandatos.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exercicio-aqui">
+<h1><span class="section-number">4. </span>EXERCÍCIO AQUI<a class="headerlink" href="#exercicio-aqui" title="Link to this heading">#</a></h1>
+<p>A diferença entre os métodos de Sainte-Laguë e D’Hondt pode ser explicada matematicamente através das fórmulas que cada método utiliza para distribuir os mandatos.</p>
 <p><strong>Fórmulas básicas:</strong></p>
 <p><em>Método D’Hondt:</em>  <span class="math notranslate nohighlight">\(\frac{V}{m}\)</span></p>
 <p><em>Método Sainte-Laguë:</em> <span class="math notranslate nohighlight">\(\frac{V}{2m + 1}\)</span></p>
@@ -1156,8 +1040,6 @@ Esta diferença faz com que o método Sainte-Laguë tenda a favorecer ligeiramen
 </div>
 </body>
 </html></section>
-</section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1214,6 +1096,7 @@ Esta diferença faz com que o método Sainte-Laguë tenda a favorecer ligeiramen
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Modelos Matemáticos na Partilha</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-partilha-proporcional">3.1. Métodos de partilha proporcional</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-distribuicao-de-mandatos">3.2. Sistemas de distribuição de mandatos</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-hondt">3.2.1. Método de Hondt</a><ul class="nav section-nav flex-column">
@@ -1228,6 +1111,10 @@ Esta diferença faz com que o método Sainte-Laguë tenda a favorecer ligeiramen
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicio-aqui">4. EXERCÍCIO AQUI</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
