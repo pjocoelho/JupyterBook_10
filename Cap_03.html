@@ -605,7 +605,126 @@ Partido D: 1 mandatos
     }
 })();
 </script>
-</div></section>
+</div><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício sobre o Método de D'Hondt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        #quiz-container {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #00008b;
+        }
+        #question {
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            width: 50px;
+            margin-right: 10px;
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 10px;
+            background-color: #4169e1;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1e90ff;
+        }
+        #feedback {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h2>Exercício</h2>
+        <div id="question">
+            Um parlamento tem 8 assentos para distribuir. Os votos foram:<br>
+            - Partido P: 100,000 votos<br>
+            - Partido Q: 80,000 votos<br>
+            - Partido R: 40,000 votos<br>
+            - Partido S: 20,000 votos<br>
+            Quantos assentos o Partido Q recebe pelo método de D'Hondt?
+        </div>
+        <input type="number" id="answer-input" min="0" max="8">
+        <button id="submit-btn">Verificar</button>
+        <button id="next-btn" style="display: none;">Próxima Pergunta</button>
+        <div id="feedback"></div>
+        <div id="attempts" style="margin-top: 10px;">Tentativas restantes: <span id="attempts-count">2</span></div>
+    </div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;script&gt;
+    const submitBtn = document.getElementById(&#39;submit-btn&#39;);
+    const nextBtn = document.getElementById(&#39;next-btn&#39;);
+    const answerInput = document.getElementById(&#39;answer-input&#39;);
+    const feedback = document.getElementById(&#39;feedback&#39;);
+    const attemptsCount = document.getElementById(&#39;attempts-count&#39;);
+
+    let attempts = 2;
+    const correctAnswer = 3;
+
+    submitBtn.addEventListener(&#39;click&#39;, checkAnswer);
+    nextBtn.addEventListener(&#39;click&#39;, nextQuestion);
+
+    function checkAnswer() {
+        const userAnswer = parseInt(answerInput.value);
+        attempts--;
+        attemptsCount.textContent = attempts;
+
+        if (userAnswer === correctAnswer) {
+            feedback.textContent = &quot;Correto! O Partido Q recebe 3 assentos pelo método de D&#39;Hondt.&quot;;
+            feedback.style.color = &#39;green&#39;;
+            endQuiz();
+        } else {
+            if (attempts &gt; 0) {
+                feedback.textContent = &quot;Incorreto. Tente calcular novamente usando o método de D&#39;Hondt.&quot;;
+                feedback.style.color = &#39;red&#39;;
+            } else {
+                feedback.textContent = `Incorreto. A resposta correta é ${correctAnswer}. O Partido Q recebe ${correctAnswer} assentos pelo método de D&#39;Hondt.`;
+                feedback.style.color = &#39;red&#39;;
+                endQuiz();
+            }
+        }
+    }
+
+    function endQuiz() {
+        submitBtn.style.display = &#39;none&#39;;
+        nextBtn.style.display = &#39;inline-block&#39;;
+        answerInput.disabled = true;
+    }
+
+    function nextQuestion() {
+        feedback.textContent = &quot;Não há mais perguntas.&quot;;
+        nextBtn.style.display = &#39;none&#39;;
+    }
+&lt;/script&gt;
+</pre></div>
+</div>
+</body>
+</html></section>
 </section>
 </section>
 
