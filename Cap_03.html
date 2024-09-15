@@ -395,8 +395,10 @@ document.write(`
 <li><p>Atribuição dos mandatos aos partidos com os maiores quocientes, até que todos os lugares sejam preenchidos.</p></li>
 </ol>
 <p><strong>EXEMPLO</strong></p>
-<p><img alt="Tabela de atribuição de mandatos" src="_images/tabela_hondt.png" />
-<strong><div style="text-align: center;">Atribuição de 8 mandatos por 3 partidos pelo método D’Hondt</div></strong></p>
+<figure>
+  <img src="tabela_hondt.png" alt="Tabela de atribuição de mandatos" style="max-width: 100%; height: auto;">
+  <figcaption style="text-align: center;">Atribuição de 8 mandatos por 3 partidos pelo método D'Hondt</figcaption>
+</figure>
 <p>A tabela mostra a distribuição de 8 mandatos entre 3 partidos (A, B e C) usando o método D’Hondt.
 Partido A: 10.000 votos
 Partido B: 6.000 votos
@@ -699,52 +701,7 @@ Partido D: 1 mandatos
 </div>
 </div>
 </div>
-<div class="blue-background-dark-blue-text">
-<div id="quiz-container" style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
-    <h2>Exercício</h2>
-    <div id="question" style="margin-bottom: 20px;">
-        Um parlamento tem 8 assentos para distribuir. Os votos foram:<br>
-        - Partido P: 100,000 votos<br>
-        - Partido Q: 80,000 votos<br>
-        - Partido R: 40,000 votos<br>
-        - Partido S: 20,000 votos<br>
-        Quantos assentos o Partido Q recebe pelo método de Hondt?
-    </div>
-    <input type="number" id="answer-input" min="0" max="8" style="width: 50px; margin-right: 10px;">
-    <button id="submit-btn" style="padding: 5px 10px; margin-right: 10px;">Verificar</button>
-    <button id="next-btn" style="padding: 5px 10px; margin-right: 10px; display: none;">Próxima Pergunta</button>
-    <div id="feedback" style="margin-top: 20px; font-weight: bold;"></div>
-</div>
-<script>
-(function() {
-    const submitBtn = document.getElementById('submit-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const answerInput = document.getElementById('answer-input');
-    const feedback = document.getElementById('feedback');
-
-    submitBtn.addEventListener('click', checkAnswer);
-    nextBtn.addEventListener('click', nextQuestion);
-
-    function checkAnswer() {
-        const userAnswer = parseInt(answerInput.value);
-        if (userAnswer === 3) {
-            feedback.textContent = "Correto! O Partido Q recebe 3 assentos pelo método de Hondt.";
-            feedback.style.color = 'green';
-        } else {
-            feedback.textContent = "Incorreto. Tente calcular novamente usando o método de Hondt.";
-            feedback.style.color = 'red';
-        }
-        submitBtn.style.display = 'none';
-        nextBtn.style.display = 'inline-block';
-    }
-
-    function nextQuestion() {
-        feedback.textContent = "Não há mais tentativas disponíveis.";
-        nextBtn.style.display = 'none';
-    }
-})();
-</script>
-</div><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -756,7 +713,7 @@ Partido D: 1 mandatos
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #f0f8ff;
         }
@@ -815,21 +772,26 @@ Partido D: 1 mandatos
         <div id="feedback"></div>
         <div id="attempts" style="margin-top: 10px;">Tentativas restantes: <span id="attempts-count">2</span></div>
     </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;script&gt;
-    const submitBtn = document.getElementById(&#39;submit-btn&#39;);
-    const nextBtn = document.getElementById(&#39;next-btn&#39;);
-    const answerInput = document.getElementById(&#39;answer-input&#39;);
-    const feedback = document.getElementById(&#39;feedback&#39;);
-    const attemptsCount = document.getElementById(&#39;attempts-count&#39;);
-
-    let attempts = 2;
-    const correctAnswer = 3;
-
-    submitBtn.addEventListener(&#39;click&#39;, checkAnswer);
+    <script>
+        const submitBtn = document.getElementById('submit-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const answerInput = document.getElementById('answer-input');
+        const feedback = document.getElementById('feedback');
+        const attemptsCount = document.getElementById('attempts-count');
+        let attempts = 2;
+        const correctAnswer = 3;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    submitBtn.addEventListener(&#39;click&#39;, checkAnswer);
     nextBtn.addEventListener(&#39;click&#39;, nextQuestion);
 
     function checkAnswer() {
         const userAnswer = parseInt(answerInput.value);
+        
+        if (isNaN(userAnswer)) {
+            feedback.textContent = &quot;Por favor, insira um número válido.&quot;;
+            feedback.style.color = &#39;red&#39;;
+            return;
+        }
+
         attempts--;
         attemptsCount.textContent = attempts;
 
@@ -867,10 +829,10 @@ Partido D: 1 mandatos
 <p><strong>Fórmulas básicas:</strong></p>
 <p><em>Método D’Hondt:</em>  <span class="math notranslate nohighlight">\(\frac{V}{m}\)</span></p>
 <p><em>Método Sainte-Laguë:</em> <span class="math notranslate nohighlight">\(\frac{V}{2m + 1}\)</span></p>
-<p>Onde <span class="math notranslate nohighlight">\(V\)</span> é o número total de votos recebidos por um partido e <span class="math notranslate nohighlight">\(m\)</span> é o número de mandatos já atribuídos a esse partido.</p>
+<p>Onde <span class="math notranslate nohighlight">\(V\)</span> é o número total de votos recebidos por um partido e <span class="math notranslate nohighlight">\(m\in\mathbb{N}\)</span> é o número de mandatos já atribuídos a esse partido.</p>
 <p>Sequência de divisores:</p>
 <p>D’Hondt: <span class="math notranslate nohighlight">\(1, 2, 3, 4, 5,\ldots\)</span>     Sainte-Laguë: <span class="math notranslate nohighlight">\(1, 3, 5, 7, 9,\ldots\)</span></p>
-<p>A principal diferença matemática entre os dois métodos está nos divisores utilizados. O método D’Hondt usa divisores consecutivos <span class="math notranslate nohighlight">\((m + 1)\)</span>, enquanto o método Sainte-Laguë usa números ímpares <span class="math notranslate nohighlight">\((2m + 1)\)</span>.
+<p>A principal diferença matemática entre os dois métodos está nos divisores utilizados. O método D’Hondt usa divisores consecutivos <span class="math notranslate nohighlight">\(m\)</span>, enquanto o método Sainte-Laguë usa números ímpares <span class="math notranslate nohighlight">\((2m + 1)\)</span>.
 Esta diferença faz com que o método Sainte-Laguë tenda a favorecer ligeiramente mais os partidos menores em comparação com o método D’Hondt, que tende a favorecer partidos maiores.</p>
 </section>
 </section>
