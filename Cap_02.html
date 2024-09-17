@@ -339,7 +339,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">2.2. Análise e Comparação de Sistemas Eleitorais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-de-votacao">2.2. Análise e Comparação de Sistemas de Votação</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questoes">2.3. Questões</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.3.1. Maioria Simples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.3.2. Maioria Absoluta</a></li>
@@ -474,15 +474,94 @@ document.write(`
 <p>Como funciona o Método de Borda:</p>
 <ul class="simple">
 <li><p>Os eleitores classificam os candidatos em ordem de preferência.</p></li>
-<li><p>Os candidatos recebem pontos com base na posição em que são classificados em cada lista. Por exemplo, num sistema com 5 candidatos, o primeiro colocado recebe 4 pontos, o segundo 3 pontos, e assim por diante até o último candidato, que recebe 0 pontos.</p></li>
+<li><p>Os candidatos recebem pontos com base na posição em que são classificados em cada lista. Por exemplo, num sistema com 5 candidatos, o primeiro colocado recebe 5 pontos, o segundo 4 pontos, e assim por diante até o último candidato, que recebe 1 ponto.</p></li>
 <li><p>No final, o candidato com o maior número total de pontos é declarado vencedor.</p></li>
 </ul>
 <p>Diferença em relação aos sistemas maioritários:</p>
 <p>Nos sistemas maioritários, como a maioria simples ou a maioria absoluta, o foco é em quantos votos diretos o candidato recebe, e o vencedor é quem obtém mais votos, seja de forma relativa (maioria simples) ou com mais de 50% dos votos (maioria absoluta). Esses sistemas não levam em consideração a ordem de preferência dos eleitores entre os diferentes candidatos.</p>
 <p>No Método de Borda, mesmo um candidato que não seja o preferido da maioria absoluta dos eleitores pode vencer, se tiver uma boa pontuação ao ser classificado consistentemente em segundo ou terceiro lugar. Isso contrasta com os sistemas maioritários, nos quais apenas o número de votos diretos decide o vencedor. Portanto, o Método de Borda valoriza o consenso e o apoio relativo mais amplo entre os eleitores, em vez de apenas uma maioria numérica direta.</p>
+<p><strong>EXEMPLO</strong></p>
+<p>Uma turma do 10.° ano, constituida por 20 alunos, está a organizar uma sessão de cinema na escola. Os alunos têm quatro opções de filmes, pelo que necessitam escolher um.</p>
+<p>De modo a que o processo de escolha seja transparente e democrático, decidiram fazer a escolha recorrendo ao Método de Borda.</p>
+<p><em>Opções de Filmes:</em></p>
+<ul class="simple">
+<li><p>A: Oppenheimer (2023)</p></li>
+<li><p>B: A Lista de Schindler (1993)</p></li>
+<li><p>C: A Sociedade dos Poetas Mortos (1989)</p></li>
+<li><p>D: Tempos Modernos (1936)</p></li>
+</ul>
+<p><em>Processo de Votação</em></p>
+<p>Cada um dos 20 alunos da turma deve ordenar as opções de 1 (favorito) a 4 (menos favorito). Após a votação, obtiveram os seguintes resultados:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ranking</p></th>
+<th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>D</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1°</p></td>
+<td><p>5</p></td>
+<td><p>8</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>2°</p></td>
+<td><p>6</p></td>
+<td><p>4</p></td>
+<td><p>7</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>3°</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>4°</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>3</p></td>
+<td><p>10</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Aplicando o Método de Borda</p>
+<ol class="arabic">
+<li><p><em>Atribuição de Pontos</em>:</p>
+<ul class="simple">
+<li><p>1° lugar: 4 pontos</p></li>
+<li><p>2° lugar: 3 pontos</p></li>
+<li><p>3° lugar: 2 ponto</p></li>
+<li><p>4° lugar: 1 pontos</p></li>
+</ul>
+</li>
+<li><p><em>Cálculo dos Pontos</em>:</p>
+<p>Filme A: (5 × 4) + (6 × 3) + (5 × 2) + (4 × 1) = 20 + 18 + 10 + 4= <strong>52 pontos</strong></p>
+<p>Filme B: (8 × 4) + (4 × 3) + (5 × 2) + (3 × 1) = 32 + 12 + 10 + 3 = <strong>57 pontos</strong></p>
+<p>Filme C: (4 × 4) + (7 × 3) + (6 × 2) + (3 × 1) = 16 + 21 + 12 + 3 = <strong>52 pontos</strong></p>
+<p>Filme D: (3 × 4) + (3 ×3 ) + (4 × 2) + (10 × 1) = 12 + 9 + 8 + 10 = <strong>39 pontos</strong></p>
+</li>
+<li><p><em>Ranking Final</em>:</p>
+<ol class="arabic simple">
+<li><p>Filme B: 57 pontos</p></li>
+<li><p>Filme A: 52 pontos</p></li>
+<li><p>Filme C: 52 pontos</p></li>
+<li><p>Filme D: 39 pontos</p></li>
+</ol>
+</li>
+</ol>
+<p><em>Conclusão</em></p>
+<p>Pelo Método de Borda, o filme escolhido para a noite de cinema seria “A Lista de Schindler” (Filme B), que obteve a maior pontuação.</p>
+<blockquote>
+<div><p><strong>Nota</strong>: Observe que houve um empate entre os filmes A e C. Em casos assim, pode-se estabelecer um critério de desempate, como o maior número de primeiros lugares ou uma nova votação entre os empatados.</p>
+</div></blockquote>
 <div class="blue-background-dark-blue-text">
 <p><strong>Exercício</strong></p>
-<p>Numa eleição com quatro candidatos, <em>A</em>, <em>B</em>, <em>C</em> e <em>D</em>, dos 24 modos distintos de ordenar os candidatos, registaram-se somente cinco modos distintos de ordenação dos candidatos, por ordem decrescente de preferência:</p>
+<p>Numa eleição com quatro candidatos, <em>A</em>, <em>B</em>, <em>C</em> e <em>D</em>, participaram 5 eleitores. Cada eleitor apresentou uma ordenação distinta de acordo com sua preferência. As cinco ordenações apresentadas, em ordem decrescente de preferência, foram as seguintes:</p>
 <p style="text-align: center;">
   (<i>A</i>, <i>B</i>, <i>C</i>, <i>D</i>);     
   (<i>B</i>, <i>C</i>, <i>D</i>, <i>A</i>);     
@@ -493,7 +572,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Pela Método de Borda qual é o vencedor? Com quantos pontos?</p></li>
 <li><p>Copie o código python para o Colab. Antes de executar o código determine qual é o vencedor. Execute o código e confirme.</p></li>
-<li><p>Experimente aumentar o número modos distintos de ordenar os candidatos, determine qual é então o vencedor e com quantos pontos. Execute o código e confirme.</p></li>
+<li><p>Experimente aumentar o número de eleitores para 6 e de modo que a ordem de preferência seja distinta das cinco apresentadas. Determine qual é então o vencedor e com quantos pontos. Execute o código e confirme.</p></li>
 </ol>
 </div><div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
@@ -538,9 +617,9 @@ document.write(`
 </section>
 </section>
 </section>
-<section id="analise-e-comparacao-de-sistemas-eleitorais">
-<h2><span class="section-number">2.2. </span>Análise e Comparação de Sistemas Eleitorais<a class="headerlink" href="#analise-e-comparacao-de-sistemas-eleitorais" title="Link to this heading">#</a></h2>
-<p>Nesta seção, vamos analisar e comparar diferentes sistemas eleitorais, destacando suas vantagens e desvantagens.</p>
+<section id="analise-e-comparacao-de-sistemas-de-votacao">
+<h2><span class="section-number">2.2. </span>Análise e Comparação de Sistemas de Votação<a class="headerlink" href="#analise-e-comparacao-de-sistemas-de-votacao" title="Link to this heading">#</a></h2>
+<p>Nesta seção, vamos analisar e comparar diferentes sistemas de votação, destacando suas vantagens e desvantagens.</p>
 <p>Após executar o código, poderá observar:</p>
 <ul class="simple">
 <li><p>Um resumo textual dos resultados para cada sistema eleitoral.</p></li>
@@ -673,7 +752,7 @@ Explorar como os resultados mudam ao variar o número de candidatos ou eleitores
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resultados das simulações (10000 simulações, 1000 eleitores, 5 candidatos):
 
 Maioria_simples:
-  Vencedor mais frequente: Candidato 4
+  Vencedor mais frequente: Candidato 5
   Frequência do vencedor: 20.49%
 
 Maioria_absoluta:
@@ -682,11 +761,11 @@ Maioria_absoluta:
   Frequência de segunda volta: 100.00%
 
 Borda:
-  Vencedor mais frequente: Candidato 4
-  Frequência do vencedor: 20.24%
+  Vencedor mais frequente: Candidato 2
+  Frequência do vencedor: 20.54%
 </pre></div>
 </div>
-<img alt="_images/4c35201711739f1957d7f96ff9f40302ddc1d752957267349ed731e1626386fd.png" src="_images/4c35201711739f1957d7f96ff9f40302ddc1d752957267349ed731e1626386fd.png" />
+<img alt="_images/8b5f0f345385b3b6684adb92df845218e42635b860bfce9381da06d5b7e1235a.png" src="_images/8b5f0f345385b3b6684adb92df845218e42635b860bfce9381da06d5b7e1235a.png" />
 </div>
 </div>
 </section>
@@ -758,7 +837,12 @@ Clique para ver a resposta<div class="sd-summary-down docutils">
 <li><p>Como o método de Hondt afeta a representação de partidos menores em comparação com a maioria simples?</p></li>
 <li><p>Como a matemática pode ajudar a tornar as eleições mais justas e transparentes?</p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
 
@@ -920,6 +1004,7 @@ Clique para ver a resposta<div class="sd-summary-down docutils">
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
 <div id="flashcards-app">
@@ -1134,7 +1219,7 @@ button {
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-eleitorais">2.2. Análise e Comparação de Sistemas Eleitorais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-e-comparacao-de-sistemas-de-votacao">2.2. Análise e Comparação de Sistemas de Votação</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questoes">2.3. Questões</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.3.1. Maioria Simples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.3.2. Maioria Absoluta</a></li>
