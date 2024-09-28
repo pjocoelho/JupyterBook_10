@@ -392,12 +392,25 @@ document.write(`
 <li><p><strong>Salário Bruto</strong>: É o valor total que um colaborador recebe antes de quaisquer deduções.</p></li>
 <li><p><strong>Salário Líquido</strong>: É o valor que um colaborador efetivamente recebe após todas as deduções obrigatórias.</p></li>
 </ul>
-<p>As principais deduções são:</p>
+<p><strong>Principais Deduções:</strong></p>
+<p>As deduções mais comuns que transformam o salário bruto em líquido são:</p>
 <ol class="arabic simple">
-<li><p>Contribuições para a Segurança Social (SS)</p></li>
-<li><p>Imposto sobre o Rendimento de Pessoas Singulares (IRS)</p></li>
+<li><p><strong>Contribuições para a Segurança Social (SS)</strong>:</p>
+<ul class="simple">
+<li><p>Esta é uma percentagem fixa do salário bruto.</p></li>
+<li><p>Geralmente, para trabalhadores por conta de outrem, é cerca de 11% do salário bruto.</p></li>
+<li><p>Este dinheiro vai para um fundo que financia benefícios como pensões e subsídios de desemprego.</p></li>
+</ul>
+</li>
+<li><p><strong>Imposto sobre o Rendimento de Pessoas Singulares (IRS)</strong>:</p>
+<ul class="simple">
+<li><p>Esta percentagem varia dependendo do salário e de outras condições pessoais.</p></li>
+<li><p>É um imposto progressivo, o que significa que quem ganha mais paga uma percentagem maior.</p></li>
+</ul>
+</li>
 </ol>
-<p>Vamos ver como calcular isso matematicamente:</p>
+<p><strong>EXEMPLO</strong></p>
+<p>Vamos recorrer ao Python para efetuar os cálculos. Para simplificar, usaremos uma taxa fixa de 15% para o IRS.</p>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -406,18 +419,34 @@ document.write(`
 </summary>
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcular_salario_liquido</span><span class="p">(</span><span class="n">salario_bruto</span><span class="p">,</span> <span class="n">taxa_ss</span><span class="o">=</span><span class="mf">0.11</span><span class="p">,</span> <span class="n">taxa_irs</span><span class="o">=</span><span class="mf">0.15</span><span class="p">):</span>
+    
+    <span class="c1"># Cálculo da contribuição para a Segurança Social</span>
+    
     <span class="n">ss</span> <span class="o">=</span> <span class="n">salario_bruto</span> <span class="o">*</span> <span class="n">taxa_ss</span>
+    
+    <span class="c1"># Cálculo do IRS</span>
+    
     <span class="n">irs</span> <span class="o">=</span> <span class="n">salario_bruto</span> <span class="o">*</span> <span class="n">taxa_irs</span>
+    
+    <span class="c1"># Cálculo do salário líquido</span>
+    
     <span class="n">salario_liquido</span> <span class="o">=</span> <span class="n">salario_bruto</span> <span class="o">-</span> <span class="n">ss</span> <span class="o">-</span> <span class="n">irs</span>
+    
     <span class="k">return</span> <span class="n">salario_liquido</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">irs</span>
 
 <span class="c1"># Exemplo</span>
-<span class="n">salario_bruto</span> <span class="o">=</span> <span class="mi">2000</span>
+
+<span class="n">salario_bruto</span> <span class="o">=</span> <span class="mi">2000</span>  <span class="c1"># Salário bruto de 2000€</span>
+
+<span class="c1"># Chamada da função para calcular o salário líquido e as deduções</span>
+
 <span class="n">liquido</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">irs</span> <span class="o">=</span> <span class="n">calcular_salario_liquido</span><span class="p">(</span><span class="n">salario_bruto</span><span class="p">)</span>
 
+<span class="c1"># Apresentação dos resultados</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Salário Bruto: </span><span class="si">{</span><span class="n">salario_bruto</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Segurança Social: </span><span class="si">{</span><span class="n">ss</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IRS: </span><span class="si">{</span><span class="n">irs</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dedução para Segurança Social: </span><span class="si">{</span><span class="n">ss</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dedução de IRS: </span><span class="si">{</span><span class="n">irs</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Salário Líquido: </span><span class="si">{</span><span class="n">liquido</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -430,15 +459,15 @@ document.write(`
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Salário Bruto: 2000.00€
-Segurança Social: 220.00€
-IRS: 300.00€
+Dedução para Segurança Social: 220.00€
+Dedução de IRS: 300.00€
 Salário Líquido: 1480.00€
 </pre></div>
 </div>
 </div>
 </details>
 </div>
-<p><strong>EXEMPLO</strong></p>
+<p><strong>EXEMPLO/EXERCÍCIO</strong></p>
 <p><em>Recibo de Vencimento - março / 2024</em></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
