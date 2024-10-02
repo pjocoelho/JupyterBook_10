@@ -4,10 +4,12 @@ author: Paulo Coelho
 logo: logo.png
 copyright: "2024"
 
+exclude_patterns: [README.md]
+
 # Configurações de execução
 execute:
   execute_notebooks: force
-  timeout: 100
+  timeout: 200
   allow_errors: false
   
 # Configurações do Jupyter
@@ -31,9 +33,9 @@ html:
     - _static/custom.css
   theme:
     name: "sphinx_book_theme"
-  use_issues_button: true
-  use_repository_button: true
-  use_edit_page_button: true
+  use_issues_button: false
+  use_repository_button: false
+  use_edit_page_button: false
   comments:
     hypothesis: true
   extra_navbar: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
@@ -74,9 +76,9 @@ sphinx:
     html_theme_options:
       use_download_button: true
       repository_url: https://github.com/pjocoelho/JupyterBook_10
-      use_issues_button: true
-      use_repository_button: true
-      use_edit_page_button: true
+      use_issues_button: false
+      use_repository_button: false
+      use_edit_page_button: false
       launch_buttons:
         thebe: false
         notebook_interface: "jupyterlab"

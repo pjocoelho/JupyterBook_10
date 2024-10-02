@@ -7,7 +7,7 @@ chapters:
 - file: Cap_01
 - file: Cap_02
 - file: Cap_03
-#- file: Cap_04
+- file: Cap_04
 
 # Linhas para habilitar botões de execução em todos os capítulos
 options:

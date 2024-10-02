@@ -14,6 +14,9 @@ Combina explicações teóricas com exemplos práticos e códigos Python execut�
 
 Divirta-se explorando e experimentando com o código!
 
+```{math}
+\newcommand{\exercisecount}{0}
+
 
 ```{tableofcontents}
 ```

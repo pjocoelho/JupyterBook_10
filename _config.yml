@@ -4,6 +4,8 @@ author: Paulo Coelho
 logo: logo.png
 copyright: "2024"
 
+exclude_patterns: [README.md]
+
 # Configurações de execução
 execute:
   execute_notebooks: force
