@@ -347,7 +347,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-eleitorais">2.3.3. Métodos Eleitorais</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussao">2.4. Discussão</a></li>
 </ul>
             </nav>
         </div>
@@ -372,18 +371,7 @@ document.write(`
 <h4><span class="section-number">2.1.1.1. </span>Maioria Simples<a class="headerlink" href="#maioria-simples" title="Link to this heading">#</a></h4>
 <p>O sistema de maioria simples é o mais básico dos sistemas eleitorais. O candidato com mais votos vence, independentemente do número total de votos ou da percentagem alcançada - não é necessário obter mais de 50% dos votos.</p>
 <div class="blue-background-dark-blue-text">
-<p><strong>Exercício</strong></p>
-<p>Numa eleição com três candidatos, <em>A</em>, <em>B</em> e <em>C</em>, registaram-se os seguintes votos:</p>
-<ul class="simple">
-<li><p>Candidato <em>A</em>: 100 votos</p></li>
-<li><p>Candidato <em>B</em>: 80 votos</p></li>
-<li><p>Candidato <em>C</em>: 70 votos</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>Pela Maioria Simples qual é o vencedor?</p></li>
-<li><p>Copie o código python para o Colab e altere os valores dos votos de cada candidato. Antes de executar o código decida qual é agora o vencedor. Execute o código e confirme.</p></li>
-</ol>
-</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
@@ -416,18 +404,7 @@ document.write(`
 <h4><span class="section-number">2.1.1.2. </span>Maioria Absoluta<a class="headerlink" href="#maioria-absoluta" title="Link to this heading">#</a></h4>
 <p>A maioria absoluta requer que o vencedor obtenha o maior número de votos e que seja superior a 50% do total dos votos. Se nenhum candidato alcançar mais de 50% do total de votos, não existe vencedor em apenas uma volta. Nesse caso recorre-se a uma segunda volta em que participam os dois candidatos mais votados na primeira volta.</p>
 <div class="blue-background-dark-blue-text">
-<p><strong>Exercício</strong></p>
-<p>Numa eleição com três candidatos, <em>A</em>, <em>B</em> e <em>C</em>, registaram-se os seguintes votos:</p>
-<ul class="simple">
-<li><p>Candidato <em>A</em>: 100 votos</p></li>
-<li><p>Candidato <em>B</em>: 80 votos</p></li>
-<li><p>Candidato <em>C</em>: 70 votos</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>Pela Maioria Absoluta existe vencedor ou é necessário realizar uma segunda volta?</p></li>
-<li><p>Copie o código python para o Colab e altere os valores dos votos de cada candidato. Antes de executar o código decida qual é agora o vencedor, ou se é necessária uma segunda volta. Execute o código e confirme.</p></li>
-</ol>
-</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
@@ -560,21 +537,7 @@ document.write(`
 <div><p><strong>Nota</strong>: Observe que houve um empate entre os filmes A e C. Em casos assim, pode-se estabelecer um critério de desempate, como o maior número de primeiros lugares ou uma nova votação entre os empatados.</p>
 </div></blockquote>
 <div class="blue-background-dark-blue-text">
-<p><strong>Exercício</strong></p>
-<p>Numa eleição com quatro candidatos, <em>A</em>, <em>B</em>, <em>C</em> e <em>D</em>, participaram 5 eleitores. Cada eleitor apresentou uma ordenação distinta de acordo com sua preferência. As cinco ordenações apresentadas, em ordem decrescente de preferência, foram as seguintes:</p>
-<p style="text-align: center;">
-  (<i>A</i>, <i>B</i>, <i>C</i>, <i>D</i>);     
-  (<i>B</i>, <i>C</i>, <i>D</i>, <i>A</i>);     
-  (<i>C</i>, <i>D</i>, <i>A</i>, <i>B</i>);     
-  (<i>D</i>, <i>A</i>, <i>B</i>, <i>C</i>);     
-  (<i>C</i>, <i>A</i>, <i>D</i>, <i>B</i>).
-</p>
-<ol class="arabic simple">
-<li><p>Pela Método de Borda qual é o vencedor? Com quantos pontos?</p></li>
-<li><p>Copie o código python para o Colab. Antes de executar o código determine qual é o vencedor. Execute o código e confirme.</p></li>
-<li><p>Experimente aumentar o número de eleitores para 6 e de modo que a ordem de preferência seja distinta das cinco apresentadas. Determine qual é então o vencedor e com quantos pontos. Execute o código e confirme.</p></li>
-</ol>
-</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
@@ -752,8 +715,8 @@ Explorar como os resultados mudam ao variar o número de candidatos ou eleitores
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resultados das simulações (10000 simulações, 1000 eleitores, 5 candidatos):
 
 Maioria_simples:
-  Vencedor mais frequente: Candidato 3
-  Frequência do vencedor: 20.41%
+  Vencedor mais frequente: Candidato 4
+  Frequência do vencedor: 20.27%
 
 Maioria_absoluta:
   Vencedor mais frequente: Não determinado
@@ -762,10 +725,10 @@ Maioria_absoluta:
 
 Borda:
   Vencedor mais frequente: Candidato 1
-  Frequência do vencedor: 20.67%
+  Frequência do vencedor: 20.83%
 </pre></div>
 </div>
-<img alt="_images/c9d91e231985f935d202fdd38cb4b1355e13b6f6f8d04ada124e9f2c18149094.png" src="_images/c9d91e231985f935d202fdd38cb4b1355e13b6f6f8d04ada124e9f2c18149094.png" />
+<img alt="_images/157439ea6262ec6eda8a69cbe6590ce707075e9ab8a1e5ce09c03c01490f091b.png" src="_images/157439ea6262ec6eda8a69cbe6590ce707075e9ab8a1e5ce09c03c01490f091b.png" />
 </div>
 </div>
 </section>
@@ -828,318 +791,6 @@ Clique para ver a resposta<div class="sd-summary-down docutils">
 <p class="sd-card-text"><strong>Resposta correta: MAIORIA ABSOLUTA</strong></p>
 </div>
 </details></section>
-</section>
-<section id="discussao">
-<h2><span class="section-number">2.4. </span>Discussão<a class="headerlink" href="#discussao" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Qual o método eleitoral mais justo? Porquê?</p></li>
-<li><p>Em que situações a maioria simples pode não ser a melhor escolha?</p></li>
-<li><p>Como o método de Hondt afeta a representação de partidos menores em comparação com a maioria simples?</p></li>
-<li><p>Como a matemática pode ajudar a tornar as eleições mais justas e transparentes?</p></li>
-</ul>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
-
-<span class="n">flashcards</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;Qual o método eleitoral mais justo? Porquê?&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="s2">&quot;A justiça de um método eleitoral pode depender do contexto. A maioria simples é direta e fácil de entender, mas pode não refletir a verdadeira preferência do eleitorado em eleições com mais de dois candidatos. A maioria absoluta garante que o vencedor tenha o apoio da maioria dos eleitores, o que pode ser visto como mais representativo em eleições com múltiplos candidatos. O método de Hondt busca uma representação proporcional em sistemas legislativos, o que pode ser considerado mais justo em eleições parlamentares.&quot;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;Em que situações a maioria simples pode não ser a melhor escolha?&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="s2">&quot;A maioria simples pode não ser a melhor escolha em eleições com mais de dois candidatos, pois um candidato pode vencer sem obter a maioria dos votos. Isso pode resultar em um vencedor que não tem o apoio da maioria dos eleitores. Por exemplo, se três candidatos recebem 40%, 35</span><span class="si">% e</span><span class="s2"> 25</span><span class="si">% d</span><span class="s2">os votos, o candidato com 40% vence, mesmo que 60</span><span class="si">% d</span><span class="s2">os eleitores prefiram outros candidatos.&quot;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;Como o método de Hondt afeta a representação de partidos menores em comparação com a maioria simples?&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="s2">&quot;O método de Hondt tende a favorecer partidos maiores em comparação com alguns outros métodos de representação proporcional, mas ainda oferece mais oportunidades para partidos menores obterem representação do que o sistema de maioria simples. Enquanto na maioria simples um partido menor pode não conseguir nenhuma representação, no método de Hondt ele pode obter assentos proporcionais à sua parcela de votos, embora com uma ligeira vantagem para partidos maiores.&quot;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;Como a matemática pode ajudar a tornar as eleições mais justas e transparentes?&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="s2">&quot;A matemática pode ajudar a tornar as eleições mais justas e transparentes ao fornecer métodos rigorosos para contar votos e determinar vencedores. Métodos como a maioria absoluta e o método de Hondt podem ajudar a garantir que o resultado da eleição reflita melhor a vontade do eleitorado. Além disso, a matemática pode ser usada para detectar e prevenir fraudes eleitorais, analisar padrões de votação e melhorar a acessibilidade e a eficiência dos processos eleitorais.&quot;</span>
-    <span class="p">}</span>
-<span class="p">]</span>
-
-<span class="n">html_content</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">&lt;div id=&quot;flashcards-app&quot;&gt;</span>
-<span class="s2">    &lt;h2&gt;Flashcards de Métodos Eleitorais&lt;/h2&gt;</span>
-<span class="s2">    &lt;div id=&quot;flashcard-container&quot; style=&quot;border: 1px solid #ccc; min-height: 200px; margin: 20px 0;&quot;&gt;</span>
-<span class="s2">        Carregando flashcards...</span>
-<span class="s2">    &lt;/div&gt;</span>
-<span class="s2">    &lt;div id=&quot;controls&quot;&gt;</span>
-<span class="s2">        &lt;button id=&quot;prev&quot;&gt;Anterior&lt;/button&gt;</span>
-<span class="s2">        &lt;button id=&quot;next&quot;&gt;Próximo&lt;/button&gt;</span>
-<span class="s2">    &lt;/div&gt;</span>
-<span class="s2">    &lt;div id=&quot;debug-info&quot; style=&quot;margin-top: 20px; font-style: italic;&quot;&gt;&lt;/div&gt;</span>
-<span class="s2">&lt;/div&gt;</span>
-
-<span class="s2">&lt;script&gt;</span>
-<span class="s2">(function() {{</span>
-<span class="s2">    const flashcards = </span><span class="si">{flashcards}</span><span class="s2">;</span>
-<span class="s2">    let currentIndex = 0;</span>
-
-<span class="s2">    function createFlashcard(flashcard) {{</span>
-<span class="s2">        return `</span>
-<span class="s2">            &lt;div class=&quot;flashcard&quot;&gt;</span>
-<span class="s2">                &lt;div class=&quot;flashcard-inner&quot;&gt;</span>
-<span class="s2">                    &lt;div class=&quot;flashcard-front&quot;&gt;</span>
-<span class="s2">                        &lt;h3&gt;${{flashcard.question}}&lt;/h3&gt;</span>
-<span class="s2">                    &lt;/div&gt;</span>
-<span class="s2">                    &lt;div class=&quot;flashcard-back&quot;&gt;</span>
-<span class="s2">                        &lt;p&gt;${{flashcard.answer}}&lt;/p&gt;</span>
-<span class="s2">                    &lt;/div&gt;</span>
-<span class="s2">                &lt;/div&gt;</span>
-<span class="s2">            &lt;/div&gt;</span>
-<span class="s2">        `;</span>
-<span class="s2">    }}</span>
-
-<span class="s2">    function showFlashcard(index) {{</span>
-<span class="s2">        const container = document.getElementById(&#39;flashcard-container&#39;);</span>
-<span class="s2">        container.innerHTML = createFlashcard(flashcards[index]);</span>
-<span class="s2">        </span>
-<span class="s2">        container.querySelector(&#39;.flashcard&#39;).addEventListener(&#39;click&#39;, function() {{</span>
-<span class="s2">            this.classList.toggle(&#39;flipped&#39;);</span>
-<span class="s2">        }});</span>
-
-<span class="s2">        document.getElementById(&#39;debug-info&#39;).textContent = `Mostrando flashcard ${{index + 1}} de ${{flashcards.length}}`;</span>
-<span class="s2">    }}</span>
-
-<span class="s2">    function setupEventListeners() {{</span>
-<span class="s2">        document.getElementById(&#39;prev&#39;).addEventListener(&#39;click&#39;, function() {{</span>
-<span class="s2">            currentIndex = (currentIndex - 1 + flashcards.length) </span><span class="si">% f</span><span class="s2">lashcards.length;</span>
-<span class="s2">            showFlashcard(currentIndex);</span>
-<span class="s2">        }});</span>
-
-<span class="s2">        document.getElementById(&#39;next&#39;).addEventListener(&#39;click&#39;, function() {{</span>
-<span class="s2">            currentIndex = (currentIndex + 1) </span><span class="si">% f</span><span class="s2">lashcards.length;</span>
-<span class="s2">            showFlashcard(currentIndex);</span>
-<span class="s2">        }});</span>
-<span class="s2">    }}</span>
-
-<span class="s2">    function init() {{</span>
-<span class="s2">        console.log(&#39;Inicializando flashcards:&#39;, flashcards);</span>
-<span class="s2">        if (flashcards &amp;&amp; flashcards.length &gt; 0) {{</span>
-<span class="s2">            showFlashcard(currentIndex);</span>
-<span class="s2">            setupEventListeners();</span>
-<span class="s2">        }} else {{</span>
-<span class="s2">            document.getElementById(&#39;flashcard-container&#39;).innerHTML = &#39;Erro: Nenhum flashcard disponível.&#39;;</span>
-<span class="s2">        }}</span>
-<span class="s2">    }}</span>
-
-<span class="s2">    // Garantir que o DOM está completamente carregado antes de inicializar</span>
-<span class="s2">    if (document.readyState === &#39;loading&#39;) {{</span>
-<span class="s2">        document.addEventListener(&#39;DOMContentLoaded&#39;, init);</span>
-<span class="s2">    }} else {{</span>
-<span class="s2">        init();</span>
-<span class="s2">    }}</span>
-<span class="s2">}})();</span>
-<span class="s2">&lt;/script&gt;</span>
-
-<span class="s2">&lt;style&gt;</span>
-<span class="s2">#flashcards-app {{</span>
-<span class="s2">    font-family: Arial, sans-serif;</span>
-<span class="s2">    max-width: 600px;</span>
-<span class="s2">    margin: 0 auto;</span>
-<span class="s2">}}</span>
-<span class="s2">.flashcard {{</span>
-<span class="s2">    width: 100%;</span>
-<span class="s2">    height: 200px;</span>
-<span class="s2">    perspective: 1000px;</span>
-<span class="s2">}}</span>
-<span class="s2">.flashcard-inner {{</span>
-<span class="s2">    position: relative;</span>
-<span class="s2">    width: 100%;</span>
-<span class="s2">    height: 100%;</span>
-<span class="s2">    text-align: center;</span>
-<span class="s2">    transition: transform 0.6s;</span>
-<span class="s2">    transform-style: preserve-3d;</span>
-<span class="s2">    cursor: pointer;</span>
-<span class="s2">}}</span>
-<span class="s2">.flashcard.flipped .flashcard-inner {{</span>
-<span class="s2">    transform: rotateY(180deg);</span>
-<span class="s2">}}</span>
-<span class="s2">.flashcard-front, .flashcard-back {{</span>
-<span class="s2">    position: absolute;</span>
-<span class="s2">    width: 100%;</span>
-<span class="s2">    height: 100%;</span>
-<span class="s2">    -webkit-backface-visibility: hidden;</span>
-<span class="s2">    backface-visibility: hidden;</span>
-<span class="s2">    display: flex;</span>
-<span class="s2">    align-items: center;</span>
-<span class="s2">    justify-content: center;</span>
-<span class="s2">    padding: 20px;</span>
-<span class="s2">    box-sizing: border-box;</span>
-<span class="s2">    border: 1px solid #ddd;</span>
-<span class="s2">    border-radius: 10px;</span>
-<span class="s2">    background-color: #f9f9f9;</span>
-<span class="s2">}}</span>
-<span class="s2">.flashcard-back {{</span>
-<span class="s2">    transform: rotateY(180deg);</span>
-<span class="s2">    overflow-y: auto;</span>
-<span class="s2">}}</span>
-<span class="s2">#controls {{</span>
-<span class="s2">    text-align: center;</span>
-<span class="s2">    margin-top: 20px;</span>
-<span class="s2">}}</span>
-<span class="s2">button {{</span>
-<span class="s2">    margin: 0 10px;</span>
-<span class="s2">    padding: 10px 20px;</span>
-<span class="s2">    font-size: 16px;</span>
-<span class="s2">    cursor: pointer;</span>
-<span class="s2">}}</span>
-<span class="s2">#debug-info {{</span>
-<span class="s2">    text-align: center;</span>
-<span class="s2">    color: #666;</span>
-<span class="s2">}}</span>
-<span class="s2">&lt;/style&gt;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-
-<span class="c1"># Renderiza o conteúdo HTML</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_content</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">flashcards</span><span class="o">=</span><span class="n">flashcards</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<div id="flashcards-app">
-    <h2>Flashcards de Métodos Eleitorais</h2>
-    <div id="flashcard-container" style="border: 1px solid #ccc; min-height: 200px; margin: 20px 0;">
-        Carregando flashcards...
-    </div>
-    <div id="controls">
-        <button id="prev">Anterior</button>
-        <button id="next">Próximo</button>
-    </div>
-    <div id="debug-info" style="margin-top: 20px; font-style: italic;"></div>
-</div>
-
-<script>
-(function() {
-    const flashcards = [{'question': 'Qual o método eleitoral mais justo? Porquê?', 'answer': 'A justiça de um método eleitoral pode depender do contexto. A maioria simples é direta e fácil de entender, mas pode não refletir a verdadeira preferência do eleitorado em eleições com mais de dois candidatos. A maioria absoluta garante que o vencedor tenha o apoio da maioria dos eleitores, o que pode ser visto como mais representativo em eleições com múltiplos candidatos. O método de Hondt busca uma representação proporcional em sistemas legislativos, o que pode ser considerado mais justo em eleições parlamentares.'}, {'question': 'Em que situações a maioria simples pode não ser a melhor escolha?', 'answer': 'A maioria simples pode não ser a melhor escolha em eleições com mais de dois candidatos, pois um candidato pode vencer sem obter a maioria dos votos. Isso pode resultar em um vencedor que não tem o apoio da maioria dos eleitores. Por exemplo, se três candidatos recebem 40%, 35% e 25% dos votos, o candidato com 40% vence, mesmo que 60% dos eleitores prefiram outros candidatos.'}, {'question': 'Como o método de Hondt afeta a representação de partidos menores em comparação com a maioria simples?', 'answer': 'O método de Hondt tende a favorecer partidos maiores em comparação com alguns outros métodos de representação proporcional, mas ainda oferece mais oportunidades para partidos menores obterem representação do que o sistema de maioria simples. Enquanto na maioria simples um partido menor pode não conseguir nenhuma representação, no método de Hondt ele pode obter assentos proporcionais à sua parcela de votos, embora com uma ligeira vantagem para partidos maiores.'}, {'question': 'Como a matemática pode ajudar a tornar as eleições mais justas e transparentes?', 'answer': 'A matemática pode ajudar a tornar as eleições mais justas e transparentes ao fornecer métodos rigorosos para contar votos e determinar vencedores. Métodos como a maioria absoluta e o método de Hondt podem ajudar a garantir que o resultado da eleição reflita melhor a vontade do eleitorado. Além disso, a matemática pode ser usada para detectar e prevenir fraudes eleitorais, analisar padrões de votação e melhorar a acessibilidade e a eficiência dos processos eleitorais.'}];
-    let currentIndex = 0;
-
-    function createFlashcard(flashcard) {
-        return `
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <h3>${flashcard.question}</h3>
-                    </div>
-                    <div class="flashcard-back">
-                        <p>${flashcard.answer}</p>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    function showFlashcard(index) {
-        const container = document.getElementById('flashcard-container');
-        container.innerHTML = createFlashcard(flashcards[index]);
-        
-        container.querySelector('.flashcard').addEventListener('click', function() {
-            this.classList.toggle('flipped');
-        });
-
-        document.getElementById('debug-info').textContent = `Mostrando flashcard ${index + 1} de ${flashcards.length}`;
-    }
-
-    function setupEventListeners() {
-        document.getElementById('prev').addEventListener('click', function() {
-            currentIndex = (currentIndex - 1 + flashcards.length) % flashcards.length;
-            showFlashcard(currentIndex);
-        });
-
-        document.getElementById('next').addEventListener('click', function() {
-            currentIndex = (currentIndex + 1) % flashcards.length;
-            showFlashcard(currentIndex);
-        });
-    }
-
-    function init() {
-        console.log('Inicializando flashcards:', flashcards);
-        if (flashcards && flashcards.length > 0) {
-            showFlashcard(currentIndex);
-            setupEventListeners();
-        } else {
-            document.getElementById('flashcard-container').innerHTML = 'Erro: Nenhum flashcard disponível.';
-        }
-    }
-
-    // Garantir que o DOM está completamente carregado antes de inicializar
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-})();
-</script>
-
-<style>
-#flashcards-app {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-}
-.flashcard {
-    width: 100%;
-    height: 200px;
-    perspective: 1000px;
-}
-.flashcard-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-.flashcard.flipped .flashcard-inner {
-    transform: rotateY(180deg);
-}
-.flashcard-front, .flashcard-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
-.flashcard-back {
-    transform: rotateY(180deg);
-    overflow-y: auto;
-}
-#controls {
-    text-align: center;
-    margin-top: 20px;
-}
-button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-#debug-info {
-    text-align: center;
-    color: #666;
-}
-</style>
-</div></div>
-</div>
 </section>
 </section>
 
@@ -1226,7 +877,6 @@ button {
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-eleitorais">2.3.3. Métodos Eleitorais</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussao">2.4. Discussão</a></li>
 </ul>
   </nav></div>
 

@@ -496,9 +496,7 @@ Salário Líquido: 1480.00€
 </div>
 </details>
 </div>
-<p><strong>Exercício</strong></p>
-<p>Copie o código para o Colab e experimente alterar o valor do salário bruto.</p>
-<p>Verifique de que modo isso afeta o salário líquido e as deduções. Que percentagem do salário bruto o trabalhador recebe como líquido?</p>
+<div class="blue-background-dark-blue-text">
 <p><strong>EXEMPLO</strong></p>
 <p><em>Recibo de Vencimento - março / 2024</em></p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -565,19 +563,7 @@ Salário Líquido: 1480.00€
 </ul>
 <p>Este valor mostra o total de IRS que já foi retido do salário de Ana Silva desde o início do ano fiscal até ao mês atual.</p>
 <p>Representa a soma de todas as retenções de IRS feitas nos seus salários nos primeiros três meses do ano.</p>
-<p><strong>QUESTÕES</strong></p>
-<ol class="arabic simple">
-<li><p>Qual é o valor do salário bruto mensal de Ana Silva?</p></li>
-<li><p>Calcule o valor do salário anual bruto de Ana Silva, considerando 14 meses de pagamento (incluindo subsídios de férias e Natal).</p></li>
-<li><p>Qual é o valor do salário líquido de Ana Silva para este mês?</p></li>
-<li><p>Calcule a percentagem do salário bruto que é deduzida em descontos.</p></li>
-<li><p>Se Ana Silva trabalha 35 horas por semana, qual é o seu salário bruto por hora?</p></li>
-<li><p>Qual é a diferença entre o salário bruto e o salário líquido neste mês?</p></li>
-<li><p>Se o subsídio de refeição é pago por 22 dias úteis, qual é o valor diário deste subsídio?</p></li>
-<li><p>Calcule o total das contribuições obrigatórias para os sistemas de segurança social (ADSE e CGA).</p></li>
-<li><p>Considerando que a taxa de IRS é de 18,5%, verifique se o valor retido está correto. Se não, qual deveria ser o valor correto?</p></li>
-<li><p>Se Ana Silva receber um aumento de 5% no próximo ano, qual será o seu novo salário base mensal?</p></li>
-</ol>
+<div class="blue-background-dark-blue-text">
 <p><strong>RESPOSTAS:</strong></p>
 <div class="toggle docutils container">
 <ol class="arabic simple">
@@ -660,12 +646,7 @@ Novo salário base = 2350,00€ + 117,50€ = 2467,50€</p>
 </li>
 </ol>
 </div>
-<p><strong>Exercícios</strong></p>
-<ol class="arabic simple">
-<li><p>Calcule o salário líquido mensal para um salário bruto de 1500€, considerando 11% de Segurança Social e uma taxa de IRS de 20%.</p></li>
-<li><p>Se um trabalhador recebe 14 salários por ano (incluindo subsídios de férias e Natal), qual seria o seu rendimento anual bruto e líquido, assumindo um salário mensal bruto de 1200€?</p></li>
-<li><p>Compare o IRS devido para rendimentos anuais de 15000€, 25000€ e 35000€, usando os escalões simplificados fornecidos acima.</p></li>
-</ol>
+<div class="blue-background-dark-blue-text">
 <p><strong>RESOLUÇÕES:</strong></p>
 <div class="toggle docutils container">
 <p><strong>Exercício 1</strong></p>
@@ -876,7 +857,7 @@ Rendimento anual líquido: 12432.00€</p>
 
 <span class="n">J</span><span class="p">,</span> <span class="n">Cf</span> <span class="o">=</span> <span class="n">juros_simples</span><span class="p">(</span><span class="n">Ci</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Juro: </span><span class="si">{</span><span class="n">J</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Capital acumulado: </span><span class="si">{</span><span class="n">A</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Capital acumulado: </span><span class="si">{</span><span class="n">Ci</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -888,16 +869,7 @@ Rendimento anual líquido: 12432.00€</p>
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Juro: 150.00€
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">14</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">J</span><span class="p">,</span> <span class="n">Cf</span> <span class="o">=</span> <span class="n">juros_simples</span><span class="p">(</span><span class="n">Ci</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Juro: </span><span class="si">{</span><span class="n">J</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">14</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Capital acumulado: </span><span class="si">{</span><span class="n">A</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">€&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;A&#39; is not defined
+Capital acumulado: 1000.00€
 </pre></div>
 </div>
 </div>
