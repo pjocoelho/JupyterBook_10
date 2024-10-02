@@ -640,6 +640,15 @@ Por exemplo, se um partido recebesse 30% dos votos numa eleição e existissem 1
 </ul>
 <p>O método de Sainte-Laguë é considerado mais proporcional que o D’Hondt, oferecendo melhor representação para partidos menores. No entanto, pode levar a uma maior fragmentação partidária nos órgãos legislativos. A escolha entre os métodos muitas vezes reflete o equilíbrio desejado entre representatividade e governabilidade no sistema político de cada país.</p>
 <div class="blue-background-dark-blue-text">
+<p><strong>Exercício 4</strong></p>
+<p>Numa eleição legislativa, quatro partidos políticos concorreram para preencher 10 mandatos na assembleia. Os resultados da votação foram os seguintes:</p>
+<p>Partido A: 100.000 votos
+Partido B: 80.000 votos
+Partido C: 30.000 votos
+Partido D: 20.000 votos</p>
+<p>Total de votos: 230.000
+Número de mandatos a serem distribuídos: 10</p>
+<p>Tarefa: Utilize os métodos de Hondt e Sainte-Laguë para distribuir os mandatos entre os partidos com base nestes resultados eleitorais. Compare os resultados obtidos por cada método.</p>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -832,14 +841,21 @@ Partido D: 1 mandatos
 <p>D’Hondt: <span class="math notranslate nohighlight">\(1, 2, 3, 4, 5,\ldots\)</span>     Sainte-Laguë: <span class="math notranslate nohighlight">\(1, 3, 5, 7, 9,\ldots\)</span></p>
 <p>A principal diferença matemática entre os dois métodos está nos divisores utilizados. O método D’Hondt usa divisores consecutivos <span class="math notranslate nohighlight">\(m\)</span>, enquanto o método Sainte-Laguë usa números ímpares <span class="math notranslate nohighlight">\((2m + 1)\)</span>.
 Esta diferença faz com que o método Sainte-Laguë tenda a favorecer ligeiramente mais os partidos menores em comparação com o método D’Hondt, que tende a favorecer partidos maiores.</p>
-<div class="blue-background-dark-blue-text">
+<div class="blue-background-dark-blue-text docutils">
+<p><strong>Exercício 5</strong></p>
+<p>No link (<a class="reference external" href="https://www.eleicoes.mai.gov.pt/europeias2024/resultados/globais">https://www.eleicoes.mai.gov.pt/europeias2024/resultados/globais</a>) apresentam-se os resultados das eleições para o Parlamento Europeu 2024.
+Recorrendo a uma folha de cálculo, use o método de Sainte-Laguë e obtenha a distribuição dos mandatos.</p>
+<p>A distribuição obtida é igual à obtida com o método de D’Hondt?</p>
+<div class="docutils">
+</div>
+</div>
 <div class="toggle docutils container">
 <p><strong>Excel:</strong>
 <img alt="ExerExcel" src="_images/ExerExcel.png" /></p>
 </div>
 <div class="blue-background-dark-blue-text">
 <div id="quiz-container">
-    <h4>Exercício</h4>
+    <h4>Exercício 6</h4>
     <div id="question">
         Um parlamento tem 8 lugares para distribuir. Os votos foram:<br>
         - Partido P: 100,000 votos<br>
@@ -940,7 +956,12 @@ button:hover {
 <li><p>Como o método de Hondt afeta a representação de partidos menores em comparação com a maioria simples?</p></li>
 <li><p>Como a matemática pode ajudar a tornar as eleições mais justas e transparentes?</p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
 
@@ -1102,6 +1123,7 @@ button:hover {
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
 <div id="flashcards-app">

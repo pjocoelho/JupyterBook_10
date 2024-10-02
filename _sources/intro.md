@@ -16,7 +16,7 @@ Divirta-se explorando e experimentando com o código!
 
 ```{math}
 \newcommand{\exercisecount}{0}
-
+```
 
 ```{tableofcontents}
 ```
