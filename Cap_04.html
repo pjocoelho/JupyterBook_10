@@ -345,6 +345,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-e-investimentos">4.2. Juros e Investimentos</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-simples">4.2.1. Juros Simples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-compostos">4.2.2. Juros Compostos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-taxas-de-juro-de-depositos-tanb-e-tanl">4.2.3. As taxas de juro de depósitos, TANB e TANL</a></li>
 </ul>
 </li>
 </ul>
@@ -404,6 +405,27 @@ document.write(`
 </ul>
 </li>
 </ol>
+<p><strong>OBSERVAÇÃO.</strong> O salário bruto e o salário base não são exatamente a mesma coisa:</p>
+<ol class="arabic simple">
+<li><p><strong>Salário base:</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Valor fixo acordado entre empregador e colaborador.</p></li>
+<li><p>É o valor mínimo que o trabalhador receberá pelo seu trabalho, não incluindo abonos adicionais.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>Salário bruto:</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Inclui o salário base e outros abonos adicionais:</p>
+<ul>
+<li><p>Horas extras</p></li>
+<li><p>Comissões</p></li>
+<li><p>Gratificações</p></li>
+</ul>
+</li>
+</ul>
+<p>Em resumo, o salário bruto é geralmente maior que o salário base, pois engloba o salário base mais todos os outros rendimentos antes dos descontos.</p>
 </section>
 </section>
 <section id="impostos-e-contribuicoes">
@@ -1006,6 +1028,36 @@ Capital acumulado: 1150.00€
 </div>
 </div>
 </section>
+<section id="as-taxas-de-juro-de-depositos-tanb-e-tanl">
+<h3><span class="section-number">4.2.3. </span>As taxas de juro de depósitos, TANB e TANL<a class="headerlink" href="#as-taxas-de-juro-de-depositos-tanb-e-tanl" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>TANB</strong>, <strong>T</strong>axa <strong>A</strong>nual <strong>N</strong>ominal <strong>B</strong>ruta, corresponde à taxa que remunera as aplicações a prazo sem a dedução do IRS;</p></li>
+<li><p><strong>TANL</strong>, <strong>T</strong>axa <strong>A</strong>nual <strong>N</strong>ominal <strong>L</strong>íquida, contempla a retenção do IRS, traduzindo assim, a remuneração que efetivamente se irá receber.</p></li>
+</ul>
+<p><strong>OBSERVAÇÕES</strong></p>
+<p>A TANB é uma:</p>
+<ul class="simple">
+<li><p>Taxa <strong>anual</strong> – expressa a remuneração do depósito para o período de um ano;</p></li>
+<li><p>Taxa <strong>nominal</strong> – não varia em função da inflação;</p></li>
+<li><p>Taxa <strong>bruta</strong> – não considera o imposto que incide sobre os juros.</p></li>
+</ul>
+<p>A relação entre TANB e TANBL pode ser expressa pela igualdade
+<div class="math notranslate nohighlight">
+\[\text{TANL} = \text{TANB} - k\times\text{TANB}\]</div>
+
+onde <span class="math notranslate nohighlight">\(k\)</span> representa uma taxa de imposto aplicável aos juros dos depósitos. Em Portugal a taxa de imposto (caso não haja regime especial) é igual a 28%, portanto <span class="math notranslate nohighlight">\(k=0,028\)</span>.</p>
+<p>A igualdade anterior é equivalente a (porquê?)
+<div class="math notranslate nohighlight">
+\[\text{TANL} = (1-k)\times \text{TANB}\]</div>
+</p>
+<p>a retenção de impostos (28% caso não haja regime especial)</p>
+<p>A TANL é mais relevante para os investidores, pois representa o ganho real após impostos. No entanto, a TANB é frequentemente usada em publicidade porque parece mais atrativa, sendo uma taxa maior.</p>
+<p><strong>EXEMPLO</strong></p>
+<p>Se um investimento tem TANB de 5% e a taxa de imposto é igual a 28%,
+<div class="math notranslate nohighlight">
+\[\text{TANL} = (1 - 0,28)\times 0,05 = 0,036\]</div>
+ ou seja TANL é igual a 3,6%.</p>
+</section>
 </section>
 </section>
 
@@ -1080,6 +1132,7 @@ Capital acumulado: 1150.00€
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-e-investimentos">4.2. Juros e Investimentos</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-simples">4.2.1. Juros Simples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#juros-compostos">4.2.2. Juros Compostos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-taxas-de-juro-de-depositos-tanb-e-tanl">4.2.3. As taxas de juro de depósitos, TANB e TANL</a></li>
 </ul>
 </li>
 </ul>
